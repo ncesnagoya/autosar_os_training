@@ -66,12 +66,6 @@
       <IsStructuredNaming>True</IsStructuredNaming>
     </Instance>
   </Class>
-  <Class Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
-    <Instance Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
-      <ProjectDeviceChangedCounter>0</ProjectDeviceChangedCounter>
-      <ProjectInitialDeviceName>R7F701025xAFP</ProjectInitialDeviceName>
-    </Instance>
-  </Class>
   <Class Guid="c3835e31-dea3-4c93-b02b-d2db997f7630">
     <Instance Guid="c3835e31-dea3-4c93-b02b-d2db997f7630">
       <BuildToolManager>eb3b4b69-af1a-4dc1-b2bc-4b81a50fb2a4</BuildToolManager>
@@ -269,7 +263,7 @@ common.Source("../../../atk2-sc1/arch/ccrh/post_cfg.py")
       <TimeTagModified--0>-8587645060966193698</TimeTagModified--0>
       <COptionG-0>True</COptionG-0>
       <COptionI-0>..
-..\..\..\atk2-sc1
+..\..\..\atk2-sc1\
 ..\..\..\atk2-sc1\arch
 ..\..\..\atk2-sc1\include
 ..\..\..\atk2-sc1\kernel
@@ -305,7 +299,7 @@ common.Source("../../../atk2-sc1/arch/ccrh/post_cfg.py")
       <COptionXmisra2004RuleNumberApply-0 />
       <COptionXpreinclude-0 />
       <COptionXvolatile-0>False</COptionXvolatile-0>
-      <COptionD-0 />
+      <COptionD-0></COptionD-0>
       <COptionOinlineSize-0>100</COptionOinlineSize-0>
       <COptionXcheck-0>None</COptionXcheck-0>
       <COptionXmisra2004RuleNumberIgnore-0 />
@@ -358,7 +352,7 @@ common.Source("../../../atk2-sc1/arch/ccrh/post_cfg.py")
       <AsmOptionPreAssembleCommands-0 />
       <COptionG-0>True</COptionG-0>
       <COptionI-0>..
-..\..\..\atk2-sc1
+..\..\..\atk2-sc1\
 ..\..\..\atk2-sc1\arch
 ..\..\..\atk2-sc1\include
 ..\..\..\atk2-sc1\kernel
@@ -378,7 +372,7 @@ common.Source("../../../atk2-sc1/arch/ccrh/post_cfg.py")
       <COptionISystem-0 />
       <COptionXprnPathValue-0>%BuildModeName%</COptionXprnPathValue-0>
       <AsmOptionOtherAdditionalOptions-0 />
-      <COptionD-0 />
+      <COptionD-0></COptionD-0>
       <COptionU-0 />
     </Instance>
     <Instance Guid="82d7e767-9e1b-43e5-a62d-4a892fa42000">
@@ -736,11 +730,6 @@ common.Source("../../../atk2-sc1/arch/ccrh/post_cfg.py")
       <DebuggerProperty-HookProperty-HookTransaction-Connected-Length>0</DebuggerProperty-HookProperty-HookTransaction-Connected-Length>
       <DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>0</DebuggerProperty-HookProperty-HookTransaction-Disconnecting-Length>
       <Debugger-DebugTarget-ProcessorElementNumber>1</Debugger-DebugTarget-ProcessorElementNumber>
-    </Instance>
-  </Class>
-  <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
-    <Instance Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
-      <ProductVersion>5.01.00.00</ProductVersion>
     </Instance>
   </Class>
 </CubeSuiteProject>

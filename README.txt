@@ -2,15 +2,15 @@
 		AUTOSAR OS 学習プログラム
 		ユーザーマニュアル
 
-		対応バージョン: Release 1.0.0
-		最終更新: 2015年7月17日
+		対応バージョン: Release 1.0.1
+		最終更新: 2016年1月8日
 
 ----------------------------------------------------------------------
  TOPPERS Software
      Toyohashi Open Platform for Embedded Real-Time Systems/
      Software
 
- Copyright (C) 2015 by Embedded and Real-Time Systems Laboratory
+ Copyright (C) 2015-2016 by Embedded and Real-Time Systems Laboratory
              Graduate School of Information Science, Nagoya Univ., JAPAN
  
  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
@@ -150,5 +150,9 @@ program以下の各フォルダにあるプロジェクトファイル"atk2-sc1.mtpj"をCS+
 PCとHSBRH850F1L100をE1により接続し，CS+によりダウンロード及び実行を行
 う．
 
+８．変更履歴
+
+2016年1月8日    Release 1.0.1  yamlファイルの追加
+2015年7月17日   Release 1.0.0  最初のリリース
 
 以上

@@ -1,0 +1,65 @@
+
+Ecuc:
+  Os:
+    OsInclude:
+      OsIncludeFileName: toppers_atk2.h
+    AppMode1:
+      DefinitionRef: OsAppMode
+    OsOS:
+      OsStackMonitoring: true
+      OsUseGetServiceId: true
+      OsUseParameterAccess: true
+      OsScalabilityClass: SC1
+      OsStatus: EXTENDED
+      OsHooks:
+        OsErrorHook: false
+        OsPostTaskHook: false
+        OsPreTaskHook: false
+        OsProtectionHook: false
+        OsShutdownHook: false
+        OsStartupHook: true
+      OsHookStack:
+        OsHookStackSize: 0x200
+    main_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 5
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskResourceRef: /Ecuc/Os/INTERNAL_RES
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode1
+    hpri_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 10
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: NON
+    mpri_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 8
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskResourceRef: /Ecuc/Os/INTERNAL_RES
+    lpri_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 6
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: NON
+    psw2_int:
+      DefinitionRef: OsIsr
+      OsIsrInterruptNumber: 36
+      OsIsrInterruptPriority: 6
+      OsIsrStackSize: 0x250
+      OsIsrCategory: CATEGORY_2
+    psw1_int:
+      DefinitionRef: OsIsr
+      OsIsrInterruptNumber: 35
+      OsIsrInterruptPriority: 3
+      OsIsrStackSize: 0x250
+      OsIsrCategory: CATEGORY_2
+    INTERNAL_RES:
+      DefinitionRef: OsResource
+      OsResourceProperty: INTERNAL

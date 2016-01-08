@@ -153,7 +153,7 @@ TASK(main_task){
 		}
 
 		if(((dsw_state & DSW3) == DSW3) && ((pre_dsw_state & DSW3) != DSW3)){
-			syslog(LOG_INFO, "main_task : SetRelAlarm(alarm_event, TICK_FOR_10MS*500, TICK_FOR_10MS*50).");
+			syslog(LOG_INFO, "main_task : SetRelAlarm(alarm_event, TICK_FOR_10MS*50, TICK_FOR_10MS*50).");
 			SetRelAlarm(alarm_event, TICK_FOR_10MS*50, TICK_FOR_10MS*50);
 		}
 

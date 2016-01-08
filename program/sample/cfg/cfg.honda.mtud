@@ -1,0 +1,151 @@
+<CubeSuiteProject.User>
+  <Class Guid="e4df8d71-236e-4af2-aaea-56345a08da25">
+    <Instance Guid="d0534c29-4366-4056-9e09-bb28c173fcf6">
+      <DeviceChangedCounter>0</DeviceChangedCounter>
+      <DeviceName>R7F701025xAFP</DeviceName>
+    </Instance>
+  </Class>
+  <Class Guid="eeae2c1c-3b17-44ca-9a69-17638edf07a9">
+    <Instance Guid="ffd1bb0e-b707-4d38-8165-aa8629d78fcc">
+      <Name>PanelWatch1</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+      <ArrayIndexNotation>None</ArrayIndexNotation>
+    </Instance>
+    <Instance Guid="3e85fe22-38a0-44af-bbc8-8b0507ddb643">
+      <Name>PanelWatch2</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+      <ArrayIndexNotation>None</ArrayIndexNotation>
+    </Instance>
+    <Instance Guid="355e79de-dc0b-4fa3-84bf-ee0d9c1ba57f">
+      <Name>PanelWatch3</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+      <ArrayIndexNotation>None</ArrayIndexNotation>
+    </Instance>
+    <Instance Guid="db34cb34-72b5-4527-9a2b-09189d05d858">
+      <Name>PanelWatch4</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+      <ArrayIndexNotation>None</ArrayIndexNotation>
+    </Instance>
+  </Class>
+  <Class Guid="cd02d324-a75c-4e2b-b858-33bd0d529683">
+    <Instance Guid="7f99f0d7-ad41-4e24-b822-a21c2c44cb6d">
+      <Name>PanelIORegister</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+    </Instance>
+  </Class>
+  <Class Guid="9e32877b-f8ee-49c6-a44e-88758c92bfd6">
+    <Instance Guid="5009dc39-5303-442f-bf09-6ab41105c4e4">
+      <Name>PanelCpuRegister</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+    </Instance>
+  </Class>
+  <Class Guid="6a2b4ad0-1b10-43f2-be75-80747f093531">
+    <Instance Guid="4c4194a5-8901-49ad-9a38-fe608d2120d5">
+      <Name>PanelLocalVariable</Name>
+      <WatchExpressionColumnWidth>0</WatchExpressionColumnWidth>
+      <ValueColumnWindth>0</ValueColumnWindth>
+      <TypeColumnWidth>0</TypeColumnWidth>
+      <AddressColumnWidth>0</AddressColumnWidth>
+      <MemoColumnWidth>0</MemoColumnWidth>
+      <IncludeHexadecimalValue>False</IncludeHexadecimalValue>
+      <WatchItemNotation>Decimal</WatchItemNotation>
+      <ArrayIndexNotation>Decimal</ArrayIndexNotation>
+      <StringEncoding>20127</StringEncoding>
+    </Instance>
+  </Class>
+  <Class Guid="18ef5858-38c3-420a-be15-54d5039f280c">
+    <Instance Guid="b6138232-2142-4eeb-9dcb-55df51626454">
+      <Name>PanelCallStack</Name>
+      <WatchItemNotation>Auto</WatchItemNotation>
+      <ArrayIndexNotation>Decimal</ArrayIndexNotation>
+      <StringEncoding>20127</StringEncoding>
+      <IsModuleFileShow>True</IsModuleFileShow>
+      <IsParameterShow>True</IsParameterShow>
+      <DepthColumnWidth>50</DepthColumnWidth>
+      <CallStackColumnWidth>500</CallStackColumnWidth>
+    </Instance>
+  </Class>
+  <Class Guid="be300f29-1d30-421a-8dc0-66ed37f33d52">
+    <Instance Guid="5ebc13c5-f2c7-46ec-9f6a-42b25b2ba7e9">
+      <Name>PanelTrace</Name>
+      <ConnectDisassembleWindow>False</ConnectDisassembleWindow>
+      <ConnectSourceWindow>False</ConnectSourceWindow>
+      <PanelNotation>Decimal</PanelNotation>
+      <ViewMode>Mixed</ViewMode>
+    </Instance>
+  </Class>
+  <Class Guid="59478c88-e5ec-417f-a204-6107640bab37">
+    <Instance Guid="7bc52930-c97a-4dde-b6b9-e26c69b1a93e">
+      <Name>PanelMemory1</Name>
+      <Notation>Hexadecimal</Notation>
+      <StringEncoding>Ascii</StringEncoding>
+      <ViewBitWidth>View8bitWidth</ViewBitWidth>
+      <MemoryDataCode>None</MemoryDataCode>
+      <IsAutoEvaluation>False</IsAutoEvaluation>
+      <HighlightAccessedArea>True</HighlightAccessedArea>
+      <EvaluationText />
+      <LineByteCount>16</LineByteCount>
+      <ViewAddressOffset>0</ViewAddressOffset>
+    </Instance>
+    <Instance Guid="90a2556c-9033-4c64-a38d-abba6c142108">
+      <Name>PanelMemory2</Name>
+      <Notation>Hexadecimal</Notation>
+      <StringEncoding>Ascii</StringEncoding>
+      <ViewBitWidth>View8bitWidth</ViewBitWidth>
+      <MemoryDataCode>None</MemoryDataCode>
+      <IsAutoEvaluation>False</IsAutoEvaluation>
+      <HighlightAccessedArea>True</HighlightAccessedArea>
+      <EvaluationText />
+      <LineByteCount>16</LineByteCount>
+      <ViewAddressOffset>0</ViewAddressOffset>
+    </Instance>
+    <Instance Guid="ddd84c80-5e6f-4c6b-87e1-dc3478c58d56">
+      <Name>PanelMemory3</Name>
+      <Notation>Hexadecimal</Notation>
+      <StringEncoding>Ascii</StringEncoding>
+      <ViewBitWidth>View8bitWidth</ViewBitWidth>
+      <MemoryDataCode>None</MemoryDataCode>
+      <IsAutoEvaluation>False</IsAutoEvaluation>
+      <HighlightAccessedArea>True</HighlightAccessedArea>
+      <EvaluationText />
+      <LineByteCount>16</LineByteCount>
+      <ViewAddressOffset>0</ViewAddressOffset>
+    </Instance>
+    <Instance Guid="95c55487-eb70-4946-9ede-42e2711a47c8">
+      <Name>PanelMemory4</Name>
+      <Notation>Hexadecimal</Notation>
+      <StringEncoding>Ascii</StringEncoding>
+      <ViewBitWidth>View8bitWidth</ViewBitWidth>
+      <MemoryDataCode>None</MemoryDataCode>
+      <IsAutoEvaluation>False</IsAutoEvaluation>
+      <HighlightAccessedArea>True</HighlightAccessedArea>
+      <EvaluationText />
+      <LineByteCount>16</LineByteCount>
+      <ViewAddressOffset>0</ViewAddressOffset>
+    </Instance>
+  </Class>
+</CubeSuiteProject.User>

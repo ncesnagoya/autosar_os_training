@@ -1,0 +1,79 @@
+
+Ecuc:
+  Os:
+    OsInclude:
+      OsIncludeFileName: toppers_atk2.h
+    AppMode1:
+      DefinitionRef: OsAppMode
+    OsOS:
+      OsStackMonitoring: true
+      OsUseGetServiceId: true
+      OsUseParameterAccess: true
+      OsScalabilityClass: SC1
+      OsStatus: EXTENDED
+      OsHooks:
+        OsErrorHook: false
+        OsPostTaskHook: false
+        OsPreTaskHook: false
+        OsProtectionHook: false
+        OsShutdownHook: false
+        OsStartupHook: true
+      OsHookStack:
+        OsHookStackSize: 0x200
+    main_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 5
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode1
+    hpri_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 10
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+    event_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 10
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskEventRef: /Ecuc/Os/EVENT_WUP
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode1
+    EVENT_WUP:
+      DefinitionRef: OsEvent
+    alarm_act_task:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/SW_Cnt
+      OsAlarmAction:
+        OsAlarmActivateTask:
+          OsAlarmActivateTaskRef: /Ecuc/Os/hpri_task
+    alarm_event:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/SW_Cnt
+      OsAlarmAction:
+        OsAlarmSetEvent:
+          OsAlarmSetEventTaskRef: /Ecuc/Os/event_task
+          OsAlarmSetEventRef: /Ecuc/Os/EVENT_WUP
+    alarm_callback:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/SW_Cnt
+      OsAlarmAction:
+        OsAlarmCallback:
+          OsAlarmCallbackName: func_alarm_callback
+    SW_Cnt:
+      DefinitionRef: OsCounter
+      OsCounterMaxAllowedValue: 99U
+      OsCounterMinCycle: 1
+      OsCounterTicksPerBase: 1U
+      OsCounterType: SOFTWARE
+      OsCounterIsrRef: /Ecuc/Os/psw1_int
+    psw1_int:
+      DefinitionRef: OsIsr
+      OsIsrInterruptNumber: 35
+      OsIsrInterruptPriority: 3
+      OsIsrStackSize: 0x250
+      OsIsrCategory: CATEGORY_2

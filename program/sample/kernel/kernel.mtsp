@@ -190,12 +190,6 @@
       <IsStructuredNaming>True</IsStructuredNaming>
     </Instance>
   </Class>
-  <Class Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
-    <Instance Guid="873c9a58-9bc5-439a-b476-78629a4553ed">
-      <ProjectDeviceChangedCounter>0</ProjectDeviceChangedCounter>
-      <ProjectInitialDeviceName>R7F701025xAFP</ProjectInitialDeviceName>
-    </Instance>
-  </Class>
   <Class Guid="c3835e31-dea3-4c93-b02b-d2db997f7630">
     <Instance Guid="c3835e31-dea3-4c93-b02b-d2db997f7630">
       <BuildToolManager>eb3b4b69-af1a-4dc1-b2bc-4b81a50fb2a4</BuildToolManager>
@@ -424,7 +418,7 @@
       <COptionG-0>True</COptionG-0>
       <COptionI-0>..
 ..\cfg
-..\..\..\atk2-sc1
+..\..\..\atk2-sc1\
 ..\..\..\atk2-sc1\arch
 ..\..\..\atk2-sc1\include
 ..\..\..\atk2-sc1\kernel
@@ -516,7 +510,7 @@ TOPPERS_LABEL_ASM
       <COptionG-0>True</COptionG-0>
       <COptionI-0>..
 ..\cfg
-..\..\..\atk2-sc1
+..\..\..\atk2-sc1\
 ..\..\..\atk2-sc1\arch
 ..\..\..\atk2-sc1\include
 ..\..\..\atk2-sc1\kernel
@@ -962,11 +956,6 @@ TOPPERS_LABEL_ASM
   <Class Guid="b6e7b682-852c-4e65-8b76-ac439b49487d">
     <Instance Guid="b6e7b682-852c-4e65-8b76-ac439b49487d">
       <IsBootLoader>False</IsBootLoader>
-    </Instance>
-  </Class>
-  <Class Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
-    <Instance Guid="2a2c2a43-ecdb-4e88-80bd-e75f3e33db90">
-      <ProductVersion>5.01.00.00</ProductVersion>
     </Instance>
   </Class>
 </CubeSuiteProject>

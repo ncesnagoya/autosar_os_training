@@ -1,0 +1,63 @@
+
+Ecuc:
+  Os:
+    OsInclude:
+      OsIncludeFileName: toppers_atk2.h
+    AppMode1:
+      DefinitionRef: OsAppMode
+    OsOS:
+      OsStackMonitoring: true
+      OsUseGetServiceId: true
+      OsUseParameterAccess: true
+      OsScalabilityClass: SC1
+      OsStatus: EXTENDED
+      OsHooks:
+        OsErrorHook: false
+        OsPostTaskHook: false
+        OsPreTaskHook: false
+        OsProtectionHook: false
+        OsShutdownHook: false
+        OsStartupHook: true
+      OsHookStack:
+        OsHookStackSize: 0x200
+    dip_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 5
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: NON
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode1
+    led_task:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 6
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: NON
+      OsTaskEventRef:
+        - /Ecuc/Os/DSW1_ON
+        - /Ecuc/Os/DSW1_OFF
+        - /Ecuc/Os/DSW2_ON
+        - /Ecuc/Os/DSW2_OFF
+        - /Ecuc/Os/DSW3_ON
+        - /Ecuc/Os/DSW3_OFF
+        - /Ecuc/Os/DSW4_ON
+        - /Ecuc/Os/DSW4_OFF
+      OsTaskAutostart:
+        OsTaskAppModeRef: /Ecuc/Os/AppMode1
+    DSW1_ON:
+      DefinitionRef: OsEvent
+    DSW1_OFF:
+      DefinitionRef: OsEvent
+    DSW2_ON:
+      DefinitionRef: OsEvent
+    DSW2_OFF:
+      DefinitionRef: OsEvent
+    DSW3_ON:
+      DefinitionRef: OsEvent
+    DSW3_OFF:
+      DefinitionRef: OsEvent
+    DSW4_ON:
+      DefinitionRef: OsEvent
+    DSW4_OFF:
+      DefinitionRef: OsEvent

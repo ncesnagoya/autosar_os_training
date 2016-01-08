@@ -1,0 +1,80 @@
+
+Ecuc:
+  Os:
+    OsInclude:
+      OsIncludeFileName: toppers_atk2.h
+    AppMode1:
+      DefinitionRef: OsAppMode
+    AppMode2:
+      DefinitionRef: OsAppMode
+    AppMode3:
+      DefinitionRef: OsAppMode
+    OsOS:
+      OsStackMonitoring: true
+      OsUseGetServiceId: true
+      OsUseParameterAccess: true
+      OsScalabilityClass: SC1
+      OsStatus: EXTENDED
+      OsHooks:
+        OsErrorHook: false
+        OsPostTaskHook: false
+        OsPreTaskHook: false
+        OsProtectionHook: false
+        OsShutdownHook: false
+        OsStartupHook: true
+      OsHookStack:
+        OsHookStackSize: 0x200
+    task1:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 10
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskEventRef: /Ecuc/Os/EVENT_WUP
+      OsTaskAutostart:
+        OsTaskAppModeRef:
+          - /Ecuc/Os/AppMode1
+          - /Ecuc/Os/AppMode3
+    task2:
+      DefinitionRef: OsTask
+      OsTaskActivation: 1U
+      OsTaskPriority: 10
+      OsTaskStackSize: 0x250
+      OsTaskSchedule: FULL
+      OsTaskEventRef: /Ecuc/Os/EVENT_WUP
+      OsTaskAutostart:
+        OsTaskAppModeRef:
+          - /Ecuc/Os/AppMode2
+          - /Ecuc/Os/AppMode3
+    EVENT_WUP:
+      DefinitionRef: OsEvent
+    alarm_event1:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/MAIN_HW_COUNTER
+      OsAlarmAction:
+        OsAlarmSetEvent:
+          OsAlarmSetEventTaskRef: /Ecuc/Os/task1
+          OsAlarmSetEventRef: /Ecuc/Os/EVENT_WUP
+      OsAlarmAutostart:
+        OsAlarmAlarmTime: TICK_FOR_10MS*100
+        OsAlarmCycleTime: TICK_FOR_10MS*100
+        OsAlarmAutostartType: ABSOLUTE
+        OsAlarmAppModeRef:
+          - /Ecuc/Os/AppMode1
+          - /Ecuc/Os/AppMode2
+          - /Ecuc/Os/AppMode3
+    alarm_event2:
+      DefinitionRef: OsAlarm
+      OsAlarmCounterRef: /Ecuc/Os/MAIN_HW_COUNTER
+      OsAlarmAction:
+        OsAlarmSetEvent:
+          OsAlarmSetEventTaskRef: /Ecuc/Os/task2
+          OsAlarmSetEventRef: /Ecuc/Os/EVENT_WUP
+      OsAlarmAutostart:
+        OsAlarmAlarmTime: TICK_FOR_10MS*100
+        OsAlarmCycleTime: TICK_FOR_10MS*100
+        OsAlarmAutostartType: ABSOLUTE
+        OsAlarmAppModeRef:
+          - /Ecuc/Os/AppMode1
+          - /Ecuc/Os/AppMode2
+          - /Ecuc/Os/AppMode3
