@@ -33,13 +33,13 @@ Ecuc:
       OsEventMask: 65536
     SampleCnt:
       DefinitionRef: OsCounter
-      OsCounterMaxAllowedValue: 99U
+      OsCounterMaxAllowedValue: 99
       OsCounterMinCycle: 10
-      OsCounterTicksPerBase: 10U
+      OsCounterTicksPerBase: 10
       OsCounterType: SOFTWARE
     MainTask:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 14
       OsTaskStackSize: 592
       OsTaskSchedule: NON
@@ -51,19 +51,19 @@ Ecuc:
           - /Ecuc/Os/AppMode3
     HighPriorityTask:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 15
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
     NonPriTask:
       DefinitionRef: OsTask
-      OsTaskActivation: 8U
+      OsTaskActivation: 8
       OsTaskPriority: 1
       OsTaskStackSize: 592
       OsTaskSchedule: NON
     Task1:
       DefinitionRef: OsTask
-      OsTaskActivation: 8U
+      OsTaskActivation: 8
       OsTaskPriority: 4
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
@@ -76,7 +76,7 @@ Ecuc:
       DefinitionRef: OsEvent
     Task2:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 7
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
@@ -116,7 +116,7 @@ Ecuc:
       DefinitionRef: OsEvent
     Task3:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 12
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
@@ -126,7 +126,7 @@ Ecuc:
         OsTaskAppModeRef: /Ecuc/Os/AppMode3
     Task4:
       DefinitionRef: OsTask
-      OsTaskActivation: 5U
+      OsTaskActivation: 5
       OsTaskPriority: 6
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
@@ -147,8 +147,8 @@ Ecuc:
         OsAlarmCallback:
           OsAlarmCallbackName: SampleAlmCb
       OsAlarmAutostart:
-        OsAlarmAlarmTime: 10U
-        OsAlarmCycleTime: 10U
+        OsAlarmAlarmTime: 10
+        OsAlarmCycleTime: 10
         OsAlarmAutostartType: ABSOLUTE
         OsAlarmAppModeRef:
           - /Ecuc/Os/AppMode1
@@ -156,7 +156,7 @@ Ecuc:
           - /Ecuc/Os/AppMode3
     scheduletable1:
       DefinitionRef: OsScheduleTable
-      OsScheduleTableDuration: 60U
+      OsScheduleTableDuration: 60
       OsScheduleTableRepeating: true
       OsScheduleTableCounterRef: /Ecuc/Os/SchtblSampleCnt
       OsScheduleTableExpiryPoint_0:
@@ -190,7 +190,7 @@ Ecuc:
         OsScheduleTblSyncStrategy: NONE
     Task5:
       DefinitionRef: OsTask
-      OsTaskActivation: 5U
+      OsTaskActivation: 5
       OsTaskPriority: 9
       OsTaskStackSize: 592
       OsTaskSchedule: FULL
@@ -203,7 +203,7 @@ Ecuc:
       OsResourceProperty: INTERNAL
     scheduletable2:
       DefinitionRef: OsScheduleTable
-      OsScheduleTableDuration: 50U
+      OsScheduleTableDuration: 50
       OsScheduleTableRepeating: true
       OsScheduleTableCounterRef: /Ecuc/Os/SchtblSampleCnt
       OsScheduleTableExpiryPoint_0:
@@ -233,7 +233,7 @@ Ecuc:
         OsScheduleTblSyncStrategy: NONE
     Task6:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 13
       OsTaskStackSize: 592
       OsTaskSchedule: NON
@@ -245,8 +245,8 @@ Ecuc:
         OsAlarmIncrementCounter:
           OsAlarmIncrementCounterRef: /Ecuc/Os/SampleCnt3
       OsAlarmAutostart:
-        OsAlarmAlarmTime: 10U
-        OsAlarmCycleTime: 10U
+        OsAlarmAlarmTime: 10
+        OsAlarmCycleTime: 10
         OsAlarmAutostartType: ABSOLUTE
         OsAlarmAppModeRef:
           - /Ecuc/Os/AppMode1
@@ -254,16 +254,16 @@ Ecuc:
           - /Ecuc/Os/AppMode3
     Task7:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 13
       OsTaskStackSize: 592
       OsTaskSchedule: NON
       OsTaskEventRef: /Ecuc/Os/T7Evt
     SampleCnt2:
       DefinitionRef: OsCounter
-      OsCounterMaxAllowedValue: 99U
+      OsCounterMaxAllowedValue: 99
       OsCounterMinCycle: 10
-      OsCounterTicksPerBase: 10U
+      OsCounterTicksPerBase: 10
       OsCounterType: SOFTWARE
     SampleAlm2:
       DefinitionRef: OsAlarm
@@ -272,8 +272,8 @@ Ecuc:
         OsAlarmCallback:
           OsAlarmCallbackName: SampleAlmCb2
       OsAlarmAutostart:
-        OsAlarmAlarmTime: 10U
-        OsAlarmCycleTime: 10U
+        OsAlarmAlarmTime: 10
+        OsAlarmCycleTime: 10
         OsAlarmAutostartType: ABSOLUTE
         OsAlarmAppModeRef:
           - /Ecuc/Os/AppMode1
@@ -281,20 +281,20 @@ Ecuc:
           - /Ecuc/Os/AppMode3
     Task8:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 13
       OsTaskStackSize: 592
       OsTaskSchedule: NON
       OsTaskEventRef: /Ecuc/Os/T8Evt
     SampleCnt3:
       DefinitionRef: OsCounter
-      OsCounterMaxAllowedValue: 99U
+      OsCounterMaxAllowedValue: 99
       OsCounterMinCycle: 10
-      OsCounterTicksPerBase: 10U
+      OsCounterTicksPerBase: 10
       OsCounterType: SOFTWARE
     SchtblSampleCnt:
       DefinitionRef: OsCounter
-      OsCounterMaxAllowedValue: 99U
+      OsCounterMaxAllowedValue: 99
       OsCounterMinCycle: 10
-      OsCounterTicksPerBase: 10U
+      OsCounterTicksPerBase: 10
       OsCounterType: SOFTWARE

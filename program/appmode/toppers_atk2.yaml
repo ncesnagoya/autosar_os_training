@@ -26,7 +26,7 @@ Ecuc:
         OsHookStackSize: 0x200
     task1:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 10
       OsTaskStackSize: 0x250
       OsTaskSchedule: FULL
@@ -37,7 +37,7 @@ Ecuc:
           - /Ecuc/Os/AppMode3
     task2:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 10
       OsTaskStackSize: 0x250
       OsTaskSchedule: FULL

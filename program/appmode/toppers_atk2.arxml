@@ -1,377 +1,329 @@
-<?xml version="1.0" encoding="EUC-JP"?>
-<!--
-
- TOPPERS ATK2
-     Toyohashi Open Platform for Embedded Real-Time Systems
-     Automotive Kernel Version 2
-
- Copyright (C) 2011-2013 by Center for Embedded Computing Systems
-             Graduate School of Information Science, Nagoya Univ., JAPAN
- Copyright (C) 2011-2013 by FUJISOFT INCORPORATED, JAPAN
- Copyright (C) 2011-2013 by FUJITSU VLSI LIMITED, JAPAN
- Copyright (C) 2011-2013 by NEC Communication Systems, Ltd., JAPAN
- Copyright (C) 2011-2013 by Panasonic Advanced Technology Development Co., Ltd., JAPAN
- Copyright (C) 2011-2013 by Renesas Electronics Corporation, JAPAN
- Copyright (C) 2011-2013 by Sunny Giken Inc., JAPAN
- Copyright (C) 2011-2013 by TOSHIBA CORPORATION, JAPAN
- Copyright (C) 2011-2013 by Witz Corporation, JAPAN
-
- 上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
- ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
- 変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
- (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
-     権表示，この利用条件および下記の無保証規定が，そのままの形でソー
-     スコード中に含まれていること．
- (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
-     用できる形で再配布する場合には，再配布に伴うドキュメント（利用
-     者マニュアルなど）に，上記の著作権表示，この利用条件および下記
-     の無保証規定を掲載すること．
- (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
-     用できない形で再配布する場合には，次のいずれかの条件を満たすこ
-     と．
-   (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
-       作権表示，この利用条件および下記の無保証規定を掲載すること．
-   (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
-       報告すること．
- (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
-     害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
-     また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
-     由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
-     免責すること．
-
- 本ソフトウェアは，無保証で提供されているものである．上記著作権者お
- よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
- に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
- アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
- の責任を負わない．
-
- $Id: toppers_atk2.arxml 844 2013-11-29 07:06:18Z fsi-asanoto $
-
--->
-<AUTOSAR xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3_STRICT.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://autosar.org/schema/r4.0">
-  <AR-PACKAGES>
-    <AR-PACKAGE>
-      <SHORT-NAME>Ecuc</SHORT-NAME>
-      <ELEMENTS>
-        <ECUC-MODULE-CONFIGURATION-VALUES>
-          <SHORT-NAME>Os</SHORT-NAME>
-          <DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Os</DEFINITION-REF>
-          <ECUC-DEF-EDITION>4.0.3</ECUC-DEF-EDITION>
-          <IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
-          <CONTAINERS>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>OsInclude</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsInclude</DEFINITION-REF>
-              <PARAMETER-VALUES>
-                <ECUC-TEXTUAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsInclude/OsIncludeFileName</DEFINITION-REF>
-                  <VALUE>toppers_atk2.h</VALUE>
-                </ECUC-TEXTUAL-PARAM-VALUE>
-              </PARAMETER-VALUES>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>AppMode1</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>AppMode2</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>AppMode3</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>OsOS</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS</DEFINITION-REF>
-              <PARAMETER-VALUES>
-                <ECUC-TEXTUAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsScalabilityClass</DEFINITION-REF>
-                  <VALUE>SC1</VALUE>
-                </ECUC-TEXTUAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsStackMonitoring</DEFINITION-REF>
-                  <VALUE>true</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-TEXTUAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsStatus</DEFINITION-REF>
-                  <VALUE>EXTENDED</VALUE>
-                </ECUC-TEXTUAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsUseGetServiceId</DEFINITION-REF>
-                  <VALUE>true</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsUseParameterAccess</DEFINITION-REF>
-                  <VALUE>true</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-              </PARAMETER-VALUES>
-              <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsHooks</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsErrorHook</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsPostTaskHook</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsPreTaskHook</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsProtectionHook</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsShutdownHook</DEFINITION-REF>
-                      <VALUE>false</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsStartupHook</DEFINITION-REF>
-                      <VALUE>true</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsHookStack</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHookStack</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHookStack/OsHookStackSize</DEFINITION-REF>
-                      <VALUE>0x200</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                </ECUC-CONTAINER-VALUE>
-              </SUB-CONTAINERS>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>task1</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask</DEFINITION-REF>
-              <PARAMETER-VALUES>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
-                  <VALUE>1U</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
-                  <VALUE>10</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-TEXTUAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
-                  <VALUE>FULL</VALUE>
-                </ECUC-TEXTUAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskStackSize</DEFINITION-REF>
-                  <VALUE>0x250</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-              </PARAMETER-VALUES>
-              <REFERENCE-VALUES>
-                <ECUC-REFERENCE-VALUE>
-                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
-                </ECUC-REFERENCE-VALUE>
-              </REFERENCE-VALUES>
-              <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsTaskAutostart</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart</DEFINITION-REF>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-              </SUB-CONTAINERS>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>task2</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask</DEFINITION-REF>
-              <PARAMETER-VALUES>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
-                  <VALUE>1U</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
-                  <VALUE>10</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-                <ECUC-TEXTUAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
-                  <VALUE>FULL</VALUE>
-                </ECUC-TEXTUAL-PARAM-VALUE>
-                <ECUC-NUMERICAL-PARAM-VALUE>
-                  <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskStackSize</DEFINITION-REF>
-                  <VALUE>0x250</VALUE>
-                </ECUC-NUMERICAL-PARAM-VALUE>
-              </PARAMETER-VALUES>
-              <REFERENCE-VALUES>
-                <ECUC-REFERENCE-VALUE>
-                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
-                </ECUC-REFERENCE-VALUE>
-              </REFERENCE-VALUES>
-              <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsTaskAutostart</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart</DEFINITION-REF>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-              </SUB-CONTAINERS>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>EVENT_WUP</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsEvent</DEFINITION-REF>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>alarm_event1</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm</DEFINITION-REF>
-              <REFERENCE-VALUES>
-                <ECUC-REFERENCE-VALUE>
-                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/MAIN_HW_COUNTER</VALUE-REF>
-                </ECUC-REFERENCE-VALUE>
-              </REFERENCE-VALUES>
-              <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
-                  <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE>
-                      <SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/task1</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                  </SUB-CONTAINERS>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
-                      <VALUE>TICK_FOR_10MS*100</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
-                      <VALUE>TICK_FOR_10MS*100</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
-                      <VALUE>ABSOLUTE</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-              </SUB-CONTAINERS>
-            </ECUC-CONTAINER-VALUE>
-            <ECUC-CONTAINER-VALUE>
-              <SHORT-NAME>alarm_event2</SHORT-NAME>
-              <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm</DEFINITION-REF>
-              <REFERENCE-VALUES>
-                <ECUC-REFERENCE-VALUE>
-                  <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
-                  <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/MAIN_HW_COUNTER</VALUE-REF>
-                </ECUC-REFERENCE-VALUE>
-              </REFERENCE-VALUES>
-              <SUB-CONTAINERS>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsAlarmAction</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
-                  <SUB-CONTAINERS>
-                    <ECUC-CONTAINER-VALUE>
-                      <SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
-                      <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
-                      <REFERENCE-VALUES>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/task2</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                        <ECUC-REFERENCE-VALUE>
-                          <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
-                          <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
-                        </ECUC-REFERENCE-VALUE>
-                      </REFERENCE-VALUES>
-                    </ECUC-CONTAINER-VALUE>
-                  </SUB-CONTAINERS>
-                </ECUC-CONTAINER-VALUE>
-                <ECUC-CONTAINER-VALUE>
-                  <SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
-                  <DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
-                  <PARAMETER-VALUES>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
-                      <VALUE>TICK_FOR_10MS*100</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-NUMERICAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
-                      <VALUE>TICK_FOR_10MS*100</VALUE>
-                    </ECUC-NUMERICAL-PARAM-VALUE>
-                    <ECUC-TEXTUAL-PARAM-VALUE>
-                      <DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
-                      <VALUE>ABSOLUTE</VALUE>
-                    </ECUC-TEXTUAL-PARAM-VALUE>
-                  </PARAMETER-VALUES>
-                  <REFERENCE-VALUES>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                    <ECUC-REFERENCE-VALUE>
-                      <DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
-                      <VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
-                    </ECUC-REFERENCE-VALUE>
-                  </REFERENCE-VALUES>
-                </ECUC-CONTAINER-VALUE>
-              </SUB-CONTAINERS>
-            </ECUC-CONTAINER-VALUE>
-          </CONTAINERS>
-        </ECUC-MODULE-CONFIGURATION-VALUES>
-      </ELEMENTS>
-    </AR-PACKAGE>
-  </AR-PACKAGES>
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated by ABREX Ver. 1.1.0 -->
+<AUTOSAR xmlns="http://autosar.org/schema/r4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://autosar.org/schema/r4.0 AUTOSAR_4-0-3_STRICT.xsd">
+	<AR-PACKAGES>
+		<AR-PACKAGE>
+			<SHORT-NAME>Ecuc</SHORT-NAME>
+			<ELEMENTS>
+				<ECUC-MODULE-CONFIGURATION-VALUES>
+					<SHORT-NAME>Os</SHORT-NAME>
+					<DEFINITION-REF DEST="ECUC-MODULE-DEF">/AUTOSAR/EcucDefs/Os</DEFINITION-REF>
+					<ECUC-DEF-EDITION>4.2.0</ECUC-DEF-EDITION>
+					<IMPLEMENTATION-CONFIG-VARIANT>VARIANT-PRE-COMPILE</IMPLEMENTATION-CONFIG-VARIANT>
+					<CONTAINERS>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>OsInclude</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsInclude</DEFINITION-REF>
+							<PARAMETER-VALUES>
+								<ECUC-TEXTUAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-STRING-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsInclude/OsIncludeFileName</DEFINITION-REF>
+									<VALUE>toppers_atk2.h</VALUE>
+								</ECUC-TEXTUAL-PARAM-VALUE>
+							</PARAMETER-VALUES>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>AppMode1</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>AppMode2</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>AppMode3</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAppMode</DEFINITION-REF>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>OsOS</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS</DEFINITION-REF>
+							<PARAMETER-VALUES>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsStackMonitoring</DEFINITION-REF>
+									<VALUE>true</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsUseGetServiceId</DEFINITION-REF>
+									<VALUE>true</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsUseParameterAccess</DEFINITION-REF>
+									<VALUE>true</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-TEXTUAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsScalabilityClass</DEFINITION-REF>
+									<VALUE>SC1</VALUE>
+								</ECUC-TEXTUAL-PARAM-VALUE>
+								<ECUC-TEXTUAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsStatus</DEFINITION-REF>
+									<VALUE>EXTENDED</VALUE>
+								</ECUC-TEXTUAL-PARAM-VALUE>
+							</PARAMETER-VALUES>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsHooks</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsErrorHook</DEFINITION-REF>
+											<VALUE>false</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsPostTaskHook</DEFINITION-REF>
+											<VALUE>false</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsPreTaskHook</DEFINITION-REF>
+											<VALUE>false</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsProtectionHook</DEFINITION-REF>
+											<VALUE>false</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsShutdownHook</DEFINITION-REF>
+											<VALUE>false</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-BOOLEAN-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHooks/OsStartupHook</DEFINITION-REF>
+											<VALUE>true</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsHookStack</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHookStack</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsOS/OsHookStack/OsHookStackSize</DEFINITION-REF>
+											<VALUE>512</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>task1</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask</DEFINITION-REF>
+							<PARAMETER-VALUES>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+									<VALUE>1</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+									<VALUE>10</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskStackSize</DEFINITION-REF>
+									<VALUE>592</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-TEXTUAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+									<VALUE>FULL</VALUE>
+								</ECUC-TEXTUAL-PARAM-VALUE>
+							</PARAMETER-VALUES>
+							<REFERENCE-VALUES>
+								<ECUC-REFERENCE-VALUE>
+									<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+									<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
+								</ECUC-REFERENCE-VALUE>
+							</REFERENCE-VALUES>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsTaskAutostart</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart</DEFINITION-REF>
+									<REFERENCE-VALUES>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+									</REFERENCE-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>task2</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask</DEFINITION-REF>
+							<PARAMETER-VALUES>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskActivation</DEFINITION-REF>
+									<VALUE>1</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskPriority</DEFINITION-REF>
+									<VALUE>10</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-NUMERICAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskStackSize</DEFINITION-REF>
+									<VALUE>592</VALUE>
+								</ECUC-NUMERICAL-PARAM-VALUE>
+								<ECUC-TEXTUAL-PARAM-VALUE>
+									<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskSchedule</DEFINITION-REF>
+									<VALUE>FULL</VALUE>
+								</ECUC-TEXTUAL-PARAM-VALUE>
+							</PARAMETER-VALUES>
+							<REFERENCE-VALUES>
+								<ECUC-REFERENCE-VALUE>
+									<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskEventRef</DEFINITION-REF>
+									<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
+								</ECUC-REFERENCE-VALUE>
+							</REFERENCE-VALUES>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsTaskAutostart</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart</DEFINITION-REF>
+									<REFERENCE-VALUES>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsTask/OsTaskAutostart/OsTaskAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+									</REFERENCE-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>EVENT_WUP</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsEvent</DEFINITION-REF>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>alarm_event1</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm</DEFINITION-REF>
+							<REFERENCE-VALUES>
+								<ECUC-REFERENCE-VALUE>
+									<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+									<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/MAIN_HW_COUNTER</VALUE-REF>
+								</ECUC-REFERENCE-VALUE>
+							</REFERENCE-VALUES>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsAlarmAction</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE>
+											<SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
+													<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/task1</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
+													<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
+											<VALUE>TICK_FOR_10MS*100</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
+											<VALUE>TICK_FOR_10MS*100</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
+											<VALUE>ABSOLUTE</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+									<REFERENCE-VALUES>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+									</REFERENCE-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+						<ECUC-CONTAINER-VALUE>
+							<SHORT-NAME>alarm_event2</SHORT-NAME>
+							<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm</DEFINITION-REF>
+							<REFERENCE-VALUES>
+								<ECUC-REFERENCE-VALUE>
+									<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmCounterRef</DEFINITION-REF>
+									<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/MAIN_HW_COUNTER</VALUE-REF>
+								</ECUC-REFERENCE-VALUE>
+							</REFERENCE-VALUES>
+							<SUB-CONTAINERS>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsAlarmAction</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-CHOICE-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction</DEFINITION-REF>
+									<SUB-CONTAINERS>
+										<ECUC-CONTAINER-VALUE>
+											<SHORT-NAME>OsAlarmSetEvent</SHORT-NAME>
+											<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent</DEFINITION-REF>
+											<REFERENCE-VALUES>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventTaskRef</DEFINITION-REF>
+													<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/task2</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+												<ECUC-REFERENCE-VALUE>
+													<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAction/OsAlarmSetEvent/OsAlarmSetEventRef</DEFINITION-REF>
+													<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/EVENT_WUP</VALUE-REF>
+												</ECUC-REFERENCE-VALUE>
+											</REFERENCE-VALUES>
+										</ECUC-CONTAINER-VALUE>
+									</SUB-CONTAINERS>
+								</ECUC-CONTAINER-VALUE>
+								<ECUC-CONTAINER-VALUE>
+									<SHORT-NAME>OsAlarmAutostart</SHORT-NAME>
+									<DEFINITION-REF DEST="ECUC-PARAM-CONF-CONTAINER-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart</DEFINITION-REF>
+									<PARAMETER-VALUES>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAlarmTime</DEFINITION-REF>
+											<VALUE>TICK_FOR_10MS*100</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-NUMERICAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-INTEGER-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmCycleTime</DEFINITION-REF>
+											<VALUE>TICK_FOR_10MS*100</VALUE>
+										</ECUC-NUMERICAL-PARAM-VALUE>
+										<ECUC-TEXTUAL-PARAM-VALUE>
+											<DEFINITION-REF DEST="ECUC-ENUMERATION-PARAM-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAutostartType</DEFINITION-REF>
+											<VALUE>ABSOLUTE</VALUE>
+										</ECUC-TEXTUAL-PARAM-VALUE>
+									</PARAMETER-VALUES>
+									<REFERENCE-VALUES>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode1</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode2</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+										<ECUC-REFERENCE-VALUE>
+											<DEFINITION-REF DEST="ECUC-REFERENCE-DEF">/AUTOSAR/EcucDefs/Os/OsAlarm/OsAlarmAutostart/OsAlarmAppModeRef</DEFINITION-REF>
+											<VALUE-REF DEST="ECUC-CONTAINER-VALUE">/Ecuc/Os/AppMode3</VALUE-REF>
+										</ECUC-REFERENCE-VALUE>
+									</REFERENCE-VALUES>
+								</ECUC-CONTAINER-VALUE>
+							</SUB-CONTAINERS>
+						</ECUC-CONTAINER-VALUE>
+					</CONTAINERS>
+				</ECUC-MODULE-CONFIGURATION-VALUES>
+			</ELEMENTS>
+		</AR-PACKAGE>
+	</AR-PACKAGES>
 </AUTOSAR>

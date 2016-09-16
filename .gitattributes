@@ -115,11 +115,9 @@ program/internal_resources/toppers_atk2.yaml -text
 program/led_1task/Rte_Type.h -text
 program/led_1task/abrex.bat -text
 program/led_1task/atk2-sc1.mtpj -text
-program/led_1task/cfg/cfg.honda.mtud -text
 program/led_1task/cfg/cfg.mtsp -text
 program/led_1task/clean.bat -text
 program/led_1task/def.py -text
-program/led_1task/kernel/kernel.honda.mtud -text
 program/led_1task/kernel/kernel.mtsp -text
 program/led_1task/toppers_atk2.arxml -text
 program/led_1task/toppers_atk2.c -text
@@ -182,13 +180,10 @@ program/resources_task_int/toppers_atk2.h -text
 program/resources_task_int/toppers_atk2.yaml -text
 program/sample/Rte_Type.h -text
 program/sample/abrex.bat -text
-program/sample/atk2-sc1.honda.mtud -text
 program/sample/atk2-sc1.mtpj -text
-program/sample/cfg/cfg.honda.mtud -text
 program/sample/cfg/cfg.mtsp -text
 program/sample/clean.bat -text
 program/sample/def.py -text
-program/sample/kernel/kernel.honda.mtud -text
 program/sample/kernel/kernel.mtsp -text
 program/sample/sample1.arxml -text
 program/sample/sample1.c -text

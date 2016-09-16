@@ -22,7 +22,7 @@ Ecuc:
         OsHookStackSize: 0x200
     main_task:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 5
       OsTaskStackSize: 0x250
       OsTaskSchedule: FULL
@@ -33,7 +33,7 @@ Ecuc:
         OsTaskAppModeRef: /Ecuc/Os/AppMode1
     hpri_task:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 10
       OsTaskStackSize: 0x250
       OsTaskSchedule: NON
@@ -45,6 +45,7 @@ Ecuc:
       OsIsrStackSize: 0x250
       OsIsrCategory: CATEGORY_2
       OsIsrResourceRef: RES_INT_PSW2
+      OsIsrInterruptSource: ENABLE
     psw1_int:
       DefinitionRef: OsIsr
       OsIsrInterruptNumber: 35
@@ -52,6 +53,7 @@ Ecuc:
       OsIsrStackSize: 0x250
       OsIsrCategory: CATEGORY_2
       OsIsrResourceRef: RES_INT_PSW1
+      OsIsrInterruptSource: ENABLE
     RES_TASK:
       DefinitionRef: OsResource
       OsResourceProperty: STANDARD

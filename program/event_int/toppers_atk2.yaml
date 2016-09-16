@@ -22,7 +22,7 @@ Ecuc:
         OsHookStackSize: 0x200
     main_task:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 5
       OsTaskStackSize: 0x250
       OsTaskSchedule: NON
@@ -40,9 +40,11 @@ Ecuc:
       OsIsrInterruptNumber: 36
       OsIsrInterruptPriority: 5
       OsIsrCategory: CATEGORY_2
+      OsIsrInterruptSource: ENABLE
     psw1_int:
       DefinitionRef: OsIsr
       OsIsrInterruptNumber: 35
       OsIsrInterruptPriority: 3
       OsIsrStackSize: 0x250
       OsIsrCategory: CATEGORY_2
+      OsIsrInterruptSource: ENABLE

@@ -22,7 +22,7 @@ Ecuc:
         OsHookStackSize: 0x200
     dip_task:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 5
       OsTaskStackSize: 0x250
       OsTaskSchedule: NON
@@ -30,7 +30,7 @@ Ecuc:
         OsTaskAppModeRef: /Ecuc/Os/AppMode1
     led_task:
       DefinitionRef: OsTask
-      OsTaskActivation: 1U
+      OsTaskActivation: 1
       OsTaskPriority: 6
       OsTaskStackSize: 0x250
       OsTaskSchedule: NON
