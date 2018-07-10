@@ -19,7 +19,7 @@
  *  Copyright (C) 2014-2015 by eSOL Co.,Ltd., JAPAN
  *  Copyright (C) 2014-2015 by SCSK Corporation, JAPAN
  *
- *  上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ *  上記著作権者は，以下の(1)~(4)の条件を満たす場合に限り，本ソフトウェ
  *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
  *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
  *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
@@ -328,11 +328,11 @@
  *  ・カウンタ
  *  システムタイマカウンタ
  *    カウンタID：MAIN_HW_COUNTER
- *    カウント値：0〜999
+ *    カウント値：0~999
  *    加算値：1
  *  サンプルカウンタ
  *    カウンタID：SampleCnt
- *    カウント値：0〜99
+ *    カウント値：0~99
  *    加算値：10
  *  ・アラーム
  *  メイン周期アラーム
@@ -389,8 +389,8 @@
 /*
  *  ファイル名，行番号の参照用の変数
  */
-extern const char8	*fatal_file_name;   /* ファイル名 */
-extern sint32		fatal_line_num;     /* 行番号 */
+extern const char8	*kernel_fatal_file_name;    /* ファイル名 */
+extern sint32		kernel_fatal_line_num;      /* 行番号 */
 
 /*
  *  内部関数プロトタイプ宣言
@@ -1503,8 +1503,8 @@ ShutdownHook(StatusType Error)
 	syslog(LOG_INFO, "");
 
 	if (Error == E_OS_SYS_ASSERT_FATAL) {
-		syslog(LOG_INFO, "fatal_file_name:%s", fatal_file_name);
-		syslog(LOG_INFO, "fatal_line_num:%d", fatal_line_num);
+		syslog(LOG_INFO, "fatal_file_name:%s", kernel_fatal_file_name);
+		syslog(LOG_INFO, "fatal_line_num:%d", kernel_fatal_line_num);
 	}
 
 #ifdef TOPPERS_ENABLE_SYS_TIMER
