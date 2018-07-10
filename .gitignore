@@ -1,0 +1,17 @@
+/atk2-sc1
+*.obj
+*.abs
+*.srec
+*.syms
+*.clnk
+*.asm
+*.map
+OS_Cfg.*
+OS_Lcfg.*
+cfg?_out*
+offset.*
+asm_config.inc
+*.mtud
+*.ccl
+kernel.lib
+kernel.lbk
