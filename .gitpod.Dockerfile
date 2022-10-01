@@ -3,8 +3,8 @@
 #FROM ubuntu:18.04
 FROM gitpod/workspace-full
 
-ENV ATHRILL_HOME=/user/local/athrill-target-rh850f1x
-ENV ATHRILL_GCC=/user/local/athrill-gcc
+ENV ATHRILL_HOME=/usr/local/athrill-target-rh850f1x
+ENV ATHRILL_GCC=/usr/local/athrill-gcc
 
 USER root
 

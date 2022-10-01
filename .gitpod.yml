@@ -10,5 +10,6 @@ ports:
 tasks:
   - init: |
       echo 'init script' # runs during prebuild
-      ln -s ln -s /home/gitpod atk2-sc1/cfg/cfg
+      mkdir -p atk2-sc1/cfg
+      ln -s /home/gitpod atk2-sc1/cfg/cfg
     command: echo 'start script'
