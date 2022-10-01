@@ -37,7 +37,4 @@ RUN wget https://github.com/mitsut/cfg/releases/download/1.9.7/cfg-1.9.7-x86_64-
     rm AUTOSAR_MMOD_XMLSchema.zip cfg-1.9.7-x86_64-unknown-linux-gnu.tar.gz readme.txt
 
 ENV LD_LIBRARY_PATH="${ATHRILL_GCC}:${ATHRILL_GCC}/lib:${LD_LIBRARY_PATH}"
-
-USER gitpod
-
-RUN echo 'export PATH=${ATHRILL_GCC}/bin:${ATHRILL_HOME}/athrill/bin/linux:$PATH' 
+ENV PATH="${ATHRILL_GCC}/bin:${ATHRILL_HOME}/athrill/bin/linux:$PATH"
