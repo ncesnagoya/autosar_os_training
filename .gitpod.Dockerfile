@@ -3,8 +3,8 @@
 #FROM ubuntu:18.04
 FROM gitpod/workspace-full
 
-ENV HAKONIWA_HOME=/home/gitpod/hakoniwa
-ENV ATHRILL_GCC=${HAKONIWA_HOME}/athrill-gcc
+ENV ATHRILL_HOME=/user/local/athrill-target-rh850f1x
+ENV ATHRILL_GCC=/user/local/athrill-gcc
 
 USER root
 
@@ -41,4 +41,4 @@ RUN wget https://github.com/mitsut/cfg/releases/download/1.9.7/cfg-1.9.7-x86_64-
 
 # USER gitpod
 
-RUN echo 'export PATH=${ATHRILL_GCC}/bin:${HAKONIWA_HOME}/athrill-target-rh850f1x/build_linux:$PATH' 
+RUN echo 'export PATH=${ATHRILL_GCC}/bin:${ATHRILL_HOME}/athrill/bin/linux:$PATH' 
