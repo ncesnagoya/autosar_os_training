@@ -28,8 +28,7 @@ RUN wget https://github.com/toppers/athrill-target-rh850f1x/releases/download/v0
     mv athrill-target-rh850f1x /usr/local/
 
 USER gitpod
-WORKDIR /home/gitpod
-
+WORKDIR /home/gitpod/cfg/cfg
 # cfg
 RUN wget https://github.com/mitsut/cfg/releases/download/1.9.7/cfg-1.9.7-x86_64-unknown-linux-gnu.tar.gz && \
 	wget https://www.autosar.org/fileadmin/user_upload/standards/classic/4-0/AUTOSAR_MMOD_XMLSchema.zip && \
@@ -37,8 +36,8 @@ RUN wget https://github.com/mitsut/cfg/releases/download/1.9.7/cfg-1.9.7-x86_64-
 	unzip AUTOSAR_MMOD_XMLSchema.zip && \
     rm AUTOSAR_MMOD_XMLSchema.zip cfg-1.9.7-x86_64-unknown-linux-gnu.tar.gz readme.txt
 
-# ENV LD_LIBRARY_PATH="${ATHRILL_GCC}:${ATHRILL_GCC}/lib:${LD_LIBRARY_PATH}"
+ENV LD_LIBRARY_PATH="${ATHRILL_GCC}:${ATHRILL_GCC}/lib:${LD_LIBRARY_PATH}"
 
-# USER gitpod
+USER gitpod
 
 RUN echo 'export PATH=${ATHRILL_GCC}/bin:${ATHRILL_HOME}/athrill/bin/linux:$PATH' 
