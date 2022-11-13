@@ -18,3 +18,7 @@ kernel.lbk
 libkernel.a 
 atk2-sc?
 atk2-sc?.dump
+log.txt
+arg_sakura.txt
+dio_tools/
+
