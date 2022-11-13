@@ -1,4 +1,3 @@
-/atk2-sc1
 *.obj
 *.abs
 *.srec
@@ -6,8 +5,8 @@
 *.clnk
 *.asm
 *.map
-OS_Cfg.*
-OS_Lcfg.*
+Os_Cfg.*
+Os_Lcfg.*
 cfg?_out*
 offset.*
 asm_config.inc
@@ -15,3 +14,11 @@ asm_config.inc
 *.ccl
 kernel.lib
 kernel.lbk
+*.o
+libkernel.a 
+atk2-sc?
+atk2-sc?.dump
+log.txt
+arg_sakura.txt
+dio_tools/
+

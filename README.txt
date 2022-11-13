@@ -2,18 +2,18 @@
 		AUTOSAR OS 学習プログラム
 		ユーザーマニュアル
 
-		対応バージョン: Release 1.0.1
-		最終更新: 2016年9月16日
+		対応バージョン: Release 1.1.1
+		最終更新: 2022年11月13日
 
 ----------------------------------------------------------------------
  TOPPERS Software
      Toyohashi Open Platform for Embedded Real-Time Systems/
      Software
 
- Copyright (C) 2015-2016 by Embedded and Real-Time Systems Laboratory
+ Copyright (C) 2015-2022 by Embedded and Real-Time Systems Laboratory
              Graduate School of Information Science, Nagoya Univ., JAPAN
  
- 上記著作権者は，以下の(1)〜(4)の条件を満たす場合に限り，本ソフトウェ
+ 上記著作権者は，以下の(1)~(4)の条件を満たす場合に限り，本ソフトウェ
  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
@@ -118,6 +118,10 @@ ATK2-SC1   : HSBRH850F1L(CCRH)簡易パッケージ 2016-06-30
 
 atk2-sc1_hsbrh850f1l_ccrh-20160630.zip
 
+ATK2-SC1   : HSBRH850F1K(CCRH)簡易パッケージ 2021-01-06
+
+atk2-sc1_hsbrh850f1k_ccrh-20210106.tar.gz
+
 それぞれのファイルをダウンロードして，トップフォルダ(program等が置かれ
 ているフォルダ)に展開すること．
 
@@ -140,20 +144,29 @@ HSBRH850F1L100が必要となる．
 
 北斗電子 HSBRH850F1L100
  http://www.hokutodenshi.co.jp/7/HSBRH850F1L100.htm
- 
-                
+
+5.1 athrill (V850シミュレータ)
+
+V850のシミュレータであるathrillを使う場合は、上記のハードウェアは必要ない．
+　https://github.com/toppers/athrill-target-rh850f1x
+
 ６．ビルド
 
 program以下の各フォルダにあるプロジェクトファイル"atk2-sc1.mtpj"をCS+
 で開きビルドすればよい．
+
+athrill環境で使用する場合は、各フォルダにあるMakefileを用いてビルドする．
 
 ７．実行
 
 PCとHSBRH850F1L100をE1により接続し，CS+によりダウンロード及び実行を行
 う．
 
+athrill環境で実行する場合は、make exeコマンドでathrillを起動して実行を行う
+
 ８．変更履歴
 
+2022年11月13日  Release 1.1.0  Athrill環境の対応
 2016年6月30日   Release 1.0.2  ATK2の対応バージョンの更新
 2016年1月8日    Release 1.0.1  yamlファイルの追加
 2015年7月17日   Release 1.0.0  最初のリリース
