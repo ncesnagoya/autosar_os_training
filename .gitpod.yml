@@ -10,5 +10,7 @@ ports:
 tasks:
   - init: |
       echo 'init script' # runs during prebuild
-      ln -s /home/gitpod/cfg atk2-sc1/cfg
+      ln -s /home/gitpod/atk2-sc1 atk2-sc1
+      unzip .devcontainer/dio_tools.zip
+      chmod 755 dio_tools/*
     command: echo 'start script'
