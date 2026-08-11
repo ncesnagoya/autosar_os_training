@@ -39,4 +39,7 @@ else
 fi
 
 octal=$(printf '%03o' "$value") || exit 1
-printf "\\$octal" | dd of="$dio_bin" bs=1 seek="$offset" count=1 conv=notrunc 2>/dev/null
+if ! printf "\\$octal" | dd of="$dio_bin" bs=1 seek="$offset" count=1 conv=notrunc 2>/dev/null; then
+	echo "Error: failed to write $dio_bin." >&2
+	exit 1
+fi
