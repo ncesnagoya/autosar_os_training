@@ -1,6 +1,8 @@
 #!/bin/sh
 
-dsw_list=$1
+cd "$(dirname "$0")" || exit 1
+
+dsw_list=$*
 dio_bin=../../dio_tools/dio.bin
 dsw_tool=../../tools/dsw.sh
 
@@ -8,6 +10,7 @@ dsw_tool=../../tools/dsw.sh
 # athrill2 restores this temporary active-low bit before the polling completes.
 sh "$dsw_tool" "$dio_bin" 1 on || exit 1
 
+run_commands()
 {
 	# athrill2 resets PPR0 at startup, so DIP switches must be changed after reset.
 	count=0
@@ -19,7 +22,8 @@ sh "$dsw_tool" "$dio_bin" 1 on || exit 1
 	done
 
 	if [ "$count" -eq 50 ]; then
-		echo "Warning: timed out waiting for athrill2 to reset PPR0; continuing." >&2
+		echo "Error: timed out waiting for athrill2 to reset PPR0." >&2
+		return 1
 	fi
 
 	for switch in $dsw_list; do
@@ -30,5 +34,18 @@ sh "$dsw_tool" "$dio_bin" 1 on || exit 1
 	done
 
 	echo "c"
-	exec cat
+	cat
+}
+
+status_file=$(mktemp "${TMPDIR:-/tmp}/appmode-run.XXXXXX") || exit 1
+trap 'rm -f "$status_file"' 0 1 2 3 15
+
+{
+	run_commands
+	echo "$?" > "$status_file"
 } | athrill2 -c1 -i -d device_config.txt -m memory.txt atk2-sc1
+athrill_status=$?
+run_status=$(cat "$status_file") || exit 1
+
+[ "$run_status" -eq 0 ] || exit "$run_status"
+exit "$athrill_status"
