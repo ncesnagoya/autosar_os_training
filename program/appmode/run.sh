@@ -28,13 +28,19 @@ run_commands()
 
 	for switch in $dsw_list; do
 		case "$switch" in
-			1|2|3|4) sh "$dsw_tool" "$dio_bin" "$switch" on ;;
+			1|2|3|4)
+				if ! sh "$dsw_tool" "$dio_bin" "$switch" on; then
+					echo "Error: failed to configure DSW $switch." >&2
+					return 1
+				fi
+				;;
 			*) echo "Warning: invalid DSW number '$switch'; skipping." >&2 ;;
 		esac
 	done
 
 	echo "c"
 	cat
+	return 0
 }
 
 status_file=$(mktemp "${TMPDIR:-/tmp}/appmode-run.XXXXXX") || exit 1
