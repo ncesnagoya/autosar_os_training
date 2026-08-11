@@ -30,5 +30,5 @@ sh tools/dsw.sh dio_tools/dio.bin 1 on
 `dsw.sh` の書式は次のとおりです。状態には `on` / `off` のほか、`1` / `0` も指定できます。
 
 ```text
-tools/dsw.sh <dio.bin へのパス> <1-4> <on|off>
+tools/dsw.sh <dio.bin へのパス> <1-4> <on|off|1|0>
 ```

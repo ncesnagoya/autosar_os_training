@@ -2,7 +2,7 @@
 
 usage()
 {
-	echo "Usage: $0 <dio.bin> <1-4> <on|off>" >&2
+	echo "Usage: $0 <dio.bin> <1-4> <on|off|1|0>" >&2
 	exit 1
 }
 
