@@ -9,6 +9,12 @@ set -u
 repo="$(cd "$(dirname "$0")/../.." && pwd)"
 cd "$repo"
 
+# atk2-sc1 is not tracked (.gitignore); it links to the kernel tree that the
+# image provides, as .setup.sh does in the devcontainer.
+if [ ! -e atk2-sc1 ]; then
+    ln -s "${ATK2_SC1_DIR:-/home/toppers/atk2-sc1}" atk2-sc1
+fi
+
 # dio_tools/dio.bin is the memory-mapped I/O file named in memory.txt.
 if [ ! -f dio_tools/dio.bin ]; then
     unzip -q -o .devcontainer/dio_tools.zip
