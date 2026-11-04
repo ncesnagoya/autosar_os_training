@@ -252,8 +252,7 @@ autosar_os_training/
 ├── atk2-sc1/            # ATK2 kernel source (symlink)
 ├── tools/               # Helper scripts
 ├── .devcontainer/       # Dev Containers config and image Dockerfile
-├── .github/             # CI (builds the image and runs every program)
-└── CLAUDE.md            # AI coding assistance guide
+└── .github/             # CI (builds the image and runs every program)
 ```
 
 ## Program Structure
