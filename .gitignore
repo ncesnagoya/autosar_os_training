@@ -22,3 +22,6 @@ log.txt
 arg_sakura.txt
 dio_tools/
 
+build.log
+athrill.stdout
+athrill.serial

@@ -1,6 +1,6 @@
 /*
  * 
- * ¥Ç¥Ğ¥¤¥¹Áàºî´Ø¿ô·²¤Î³°ÉôÀë¸À
+ * ãƒ‡ãƒã‚¤ã‚¹æ“ä½œé–¢æ•°ç¾¤ã®å¤–éƒ¨å®£è¨€
  *
  */
 #ifndef _DEVICE_H_
@@ -9,7 +9,7 @@
 #include "Os.h"
 
 /*
- * LED¤ÎON/OFF¥Ñ¥¿¡¼¥ó
+ * LEDã®ON/OFFãƒ‘ã‚¿ãƒ¼ãƒ³
  */
 #define LED1             0x01
 #define LED2             0x02
@@ -18,18 +18,18 @@
 #define LED_OFF          0x00
 
 /*
- *  LEDÀÜÂ³¥İ¡¼¥È½é´ü²½
+ *  LEDæ¥ç¶šãƒãƒ¼ãƒˆåˆæœŸåŒ–
  */ 
 extern void led_init(void);
 
 /*
- *  LEDÀÜÂ³¥İ¡¼¥È½ñ¤­¹ş¤ß
+ *  LEDæ¥ç¶šãƒãƒ¼ãƒˆæ›¸ãè¾¼ã¿
  */ 
 extern void led_out(uint8 led_data);
 
 
 /*
- * DIP¥¹¥¤¥Ã¥ÁÀÜÂ³¥Ó¥Ã¥È
+ * DIPã‚¹ã‚¤ãƒƒãƒæ¥ç¶šãƒ“ãƒƒãƒˆ
  */
 #define DSW1             0x01
 #define DSW2             0x02
@@ -38,67 +38,67 @@ extern void led_out(uint8 led_data);
 
 
 /*
- * DIP¥¹¥¤¥Ã¥ÁÀÜÂ³¥İ¡¼¥È½é´ü²½
+ * DIPã‚¹ã‚¤ãƒƒãƒæ¥ç¶šãƒãƒ¼ãƒˆåˆæœŸåŒ–
  */
 extern void switch_dip_init(void);
 
 /*
- * DIP¥¹¥¤¥Ã¥Á¾õÂÖ¤ÎÆÉ¤ß¹ş¤ß
+ * DIPã‚¹ã‚¤ãƒƒãƒçŠ¶æ…‹ã®èª­ã¿è¾¼ã¿
  */
 extern uint8 switch_dip_sense(void);
 
 /*
- * ¥İ¡¼¥È1¤ÎPUSH¥¹¥¤¥Ã¥ÁÀÜÂ³¥Ó¥Ã¥È
+ * ãƒãƒ¼ãƒˆ1ã®PUSHã‚¹ã‚¤ãƒƒãƒæ¥ç¶šãƒ“ãƒƒãƒˆ
  */
 #define PSW1             0x01
 #define PSW2             0x02
 #define PSW_MASK         (PSW2|PSW1)
 
 /*
- * PUSH¥¹¥¤¥Ã¥ÁÀÜÂ³¥İ¡¼¥È½é´ü²½
+ * PUSHã‚¹ã‚¤ãƒƒãƒæ¥ç¶šãƒãƒ¼ãƒˆåˆæœŸåŒ–
  */
 extern void switch_push_init(void);
 
 /*
- * PUSH¥¹¥¤¥Ã¥Á¾õÂÖ¤ÎÆÉ¤ß¹ş¤ß
+ * PUSHã‚¹ã‚¤ãƒƒãƒçŠ¶æ…‹ã®èª­ã¿è¾¼ã¿
  */
 extern uint8 switch_push_sense(void);
 
 
 
 /*
- * INT3(PSW2)³ä¹ş¤ßÈÖ¹æ
+ * INT3(PSW2)å‰²è¾¼ã¿ç•ªå·
  */
 #define INT3_INHNO   4
 #define SW9_INHNO    4
 
 
 /*
- * PSW2³ä¹ş¤ß½é´ü²½
+ * PSW2å‰²è¾¼ã¿åˆæœŸåŒ–
  */
 extern void sw9_int_init(void);
 
 /*
- * PSW1³ä¹ş¤ßÈÖ¹æ
+ * PSW1å‰²è¾¼ã¿ç•ªå·
  */
 #define INT4_INHNO   9
 #define SW8_INHNO    9
 
 
 /*
- * INT4(PSW1)³ä¹ş¤ß½é´ü²½
+ * INT4(PSW1)å‰²è¾¼ã¿åˆæœŸåŒ–
  */
 extern void sw8_int_init(void);
 
 /*
- * LED¤È¥¹¥¤¥Ã¥Á¤Î¾õÂÖ¥Ş¥¯¥í
+ * LEDã¨ã‚¹ã‚¤ãƒƒãƒã®çŠ¶æ…‹ãƒã‚¯ãƒ­
  */
-#define ON              1     /* LED¤ä¥¹¥¤¥Ã¥ÁON¾õÂÖ             */
-#define OFF             0     /* LED¤ä¥¹¥¤¥Ã¥ÁOFF¾õÂÖ            */
+#define ON              1     /* LEDã‚„ã‚¹ã‚¤ãƒƒãƒONçŠ¶æ…‹             */
+#define OFF             0     /* LEDã‚„ã‚¹ã‚¤ãƒƒãƒOFFçŠ¶æ…‹            */
 
 
 /*
- * LED¤È¥¹¥¤¥Ã¥Á¤Î¸ÄÊÌÀßÄê¡¦ÆÉ¤ß¹ş¤ß´Ø¿ô·²
+ * LEDã¨ã‚¹ã‚¤ãƒƒãƒã®å€‹åˆ¥è¨­å®šãƒ»èª­ã¿è¾¼ã¿é–¢æ•°ç¾¤
  */
 extern void set_led1_state(unsigned char state);
 extern void set_led2_state(unsigned char state);
