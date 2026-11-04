@@ -7,7 +7,7 @@ set ABREX_DIR=%OS_DIR%/utils/abrex
 
 set APP_NAME=sample1
 
-ruby %ABREX_DIR%/abrex.rb ./%APP_NAME%.yaml
+python %ABREX_DIR%/abrex.py ./%APP_NAME%.yaml
 
 pause
 exit
