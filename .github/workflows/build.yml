@@ -30,16 +30,34 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and publish the training image
+      - name: Build the training image
         uses: docker/build-push-action@v7
         with:
           context: .
           file: .devcontainer/base.Dockerfile
           platforms: linux/amd64
-          push: ${{ github.event_name == 'push' }}
-          load: ${{ github.event_name == 'pull_request' }}
+          load: true
+          tags: ${{ env.IMAGE_NAME }}:ci-${{ github.sha }}
+          cache-from: type=gha
+
+      # Build every training program and boot it on athrill inside the image
+      # just built, before anything is published.
+      - name: Build all programs and boot each on athrill
+        run: |
+          docker run --rm --user "$(id -u):$(id -g)" \
+            -v "$GITHUB_WORKSPACE:/work" -w /work \
+            "$IMAGE_NAME:ci-$GITHUB_SHA" \
+            bash .github/scripts/build-and-smoke.sh
+
+      - name: Publish the training image
+        if: github.event_name == 'push'
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: .devcontainer/base.Dockerfile
+          platforms: linux/amd64
+          push: true
           tags: |
-            ${{ env.IMAGE_NAME }}:ci-${{ github.sha }}
             ${{ env.IMAGE_NAME }}:debian13
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:sha-${{ github.sha }}
@@ -47,4 +65,4 @@ jobs:
             org.opencontainers.image.source=https://github.com/ncesnagoya/autosar_os_training
             org.opencontainers.image.description=AUTOSAR OS training environment based on Debian 13
           cache-from: type=gha
-          cache-to: ${{ github.event_name == 'push' && 'type=gha,mode=max' || '' }}
+          cache-to: type=gha,mode=max
