@@ -3,10 +3,10 @@
 #include "prc_sil.h"
 
 /*
- * LED��³�ݡ���
+ * LED接続ポート
  * 
- * ��ĥI/O�ܡ��ɤ�LED1-3�ϥץ�����ޥ֥������ϥݡ���4��
- * ���Τ褦����³����Ƥ��롥
+ * 拡張I/OボードのLED1-3はプログラマブル入出力ポート4に
+ * 次のように接続されている．
  *  D1 : P8_4
  *  D2 : P8_5
  *  D3 : P8_6
@@ -21,18 +21,18 @@
 #define LED_PORT_MASK (LED4_PORT|LED3_PORT|LED2_PORT|LED1_PORT)
 
 /*
- *  LED��³�ݡ��Ƚ����
+ *  LED接続ポート初期化
  */ 
 void
 led_init(void){
 	uint16 wk;
 
-	/* PMC8 ���� */
+	/* PMC8 設定 */
 	wk = sil_reh_mem((void *) PMC(8));
 	wk &= ~LED_PORT_MASK;
 	sil_wrh_mem((void *) PMC(8), wk);
 
-	/* PM8 ���� */
+	/* PM8 設定 */
 	wk = sil_reh_mem((void *) PM(8));
 	wk &= ~LED_PORT_MASK;
 	sil_wrh_mem((void *) PM(8), wk);
@@ -43,7 +43,7 @@ led_init(void){
 
 
 /*
- *  LED��³�ݡ��Ƚ񤭹���
+ *  LED接続ポート書き込み
  */ 
 void
 led_out(uint8 led_data){
@@ -72,10 +72,10 @@ led_out(uint8 led_data){
 
 
 /*
- * DIP�����å���³�ݡ���
+ * DIPスイッチ接続ポート
  * 
- * ��ĥI/O�ܡ��ɤ�SW1-4�ϥץ�����ޥ֥������ϥݡ���
- * �˥���С�����𤷤���³����Ƥ��롥
+ * 拡張I/OボードのSW1-4はプログラマブル入出力ポート
+ * にインバータを介して接続されている．
  *  DSW1 : P0_7
  *  DSW2 : P0_8
  *  DSW3 : P0_9
@@ -90,30 +90,30 @@ led_out(uint8 led_data){
 #define DSW_PORT_MASK (DSW4_PORT|DSW3_PORT|DSW2_PORT|DSW1_PORT)
 
 /*
- * DIP�����å���³�ݡ��Ƚ����
+ * DIPスイッチ接続ポート初期化
  */
 void
 switch_dip_init(void){
 	uint16 wk;
 
-	/* PMC0 ���� */
+	/* PMC0 設定 */
 	wk = sil_reh_mem((void *) PMC(0));
 	wk &= ~DSW_PORT_MASK;
 	sil_wrh_mem((void *) PMC(0), wk);
 
-	/* PM0 ���� */
+	/* PM0 設定 */
 	wk = sil_reh_mem((void *) PM(0));
 	wk |= DSW_PORT_MASK;
 	sil_wrh_mem((void *) PM(0), wk);
 
-	/* PIBC0 ���� */
+	/* PIBC0 設定 */
 	wk = sil_reh_mem((void *) PIBC(0));
 	wk |= DSW_PORT_MASK;
 	sil_wrh_mem((void *) PIBC(0), wk);
 }
 
 /*
- * DIP�����å����֤��ɤ߹���
+ * DIPスイッチ状態の読み込み
  */
 uint8
 switch_dip_sense(void){
@@ -140,10 +140,10 @@ switch_dip_sense(void){
 
 
 /*
- * PUSH�����å���³�ݡ���
+ * PUSHスイッチ接続ポート
  * 
- *  PSW1 : P8_0 (INTP4) : ��3����
- *  PSW2 : P8_1 (INTP5) : ��3����
+ *  PSW1 : P8_0 (INTP4) : 第3兼用
+ *  PSW2 : P8_1 (INTP5) : 第3兼用
  */
 #define PSW1_PORT  0x0001
 #define PSW2_PORT  0x0002
@@ -160,56 +160,56 @@ switch_dip_sense(void){
 #define FCLA0CTL5_INTPL 0xFFC34034
 
 /*
- * PUSH�����å���³�ݡ��Ƚ����
+ * PUSHスイッチ接続ポート初期化
  */
 void
 switch_push_init(void){
 	uint16 wk;
 
-	/* PFCAE8 ���� */
+	/* PFCAE8 設定 */
 	wk = sil_reh_mem((void *) PFCAE(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PFCAE_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PFCAE(8), wk);
 
-	/* PFCE8 ���� */
+	/* PFCE8 設定 */
 	wk = sil_reh_mem((void *) PFCE(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PFCE_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PFCE(8), wk);
 
-	/* PFC8 ���� */
+	/* PFC8 設定 */
 	wk = sil_reh_mem((void *) PFC(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PFC_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PFC(8), wk);
 
-	/* PMC8 ���� */
+	/* PMC8 設定 */
 	wk = sil_reh_mem((void *) PMC(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PMC_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PMC(8), wk);
 
-	/* PM8 ���� */
+	/* PM8 設定 */
 	wk = sil_reh_mem((void *) PM(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PM_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PM(8), wk);
 
-	/* PIBC8 ���� */
+	/* PIBC8 設定 */
 	wk = sil_reh_mem((void *) PIBC(8));
 	wk &= ~PSW_PORT_MASK;
 	wk |= (PSW_PORT_PIBC_INIT & PSW_PORT_MASK);
 	sil_wrh_mem((void *) PIBC(8), wk);
 
-	/* ���å�����Ω�������� */
+	/* エッジ検出立ち下がり */
 	sil_wrb_mem((void *)FCLA0CTL4_INTPL, 0x02);
 	sil_wrb_mem((void *)FCLA0CTL5_INTPL, 0x02);
 }
 
 
 /*
- * PUSH�����å����֤��ɤ߹���
+ * PUSHスイッチ状態の読み込み
  */
 uint8
 switch_push_sense(void){

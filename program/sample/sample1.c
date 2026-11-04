@@ -19,354 +19,354 @@
  *  Copyright (C) 2014-2015 by eSOL Co.,Ltd., JAPAN
  *  Copyright (C) 2014-2015 by SCSK Corporation, JAPAN
  *
- *  �嵭����Ԥϡ��ʲ���(1)���(4)�ξ������������˸¤ꡤ�ܥ��եȥ���
- *  �����ܥ��եȥ���������Ѥ�����Τ�ޤࡥ�ʲ�Ʊ���ˤ���ѡ�ʣ������
- *  �ѡ������ۡʰʲ������ѤȸƤ֡ˤ��뤳�Ȥ�̵���ǵ������롥
- *  (1) �ܥ��եȥ������򥽡��������ɤη������Ѥ�����ˤϡ��嵭������
- *      ��ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ��꤬�����Τޤޤη��ǥ���
- *      ����������˴ޤޤ�Ƥ��뤳�ȡ�
- *  (2) �ܥ��եȥ������򡤥饤�֥������ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ�����Ǻ����ۤ�����ˤϡ������ۤ�ȼ���ɥ�����ȡ�����
- *      �ԥޥ˥奢��ʤɡˤˡ��嵭�����ɽ�����������Ѿ�浪��Ӳ���
- *      ��̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *  (3) �ܥ��եȥ������򡤵�����Ȥ߹���ʤɡ�¾�Υ��եȥ�������ȯ�˻�
- *      �ѤǤ��ʤ����Ǻ����ۤ�����ˤϡ����Τ����줫�ξ�����������
- *      �ȡ�
- *    (a) �����ۤ�ȼ���ɥ�����ȡ����Ѽԥޥ˥奢��ʤɡˤˡ��嵭����
- *        �ɽ�����������Ѿ�浪��Ӳ�����̵�ݾڵ����Ǻܤ��뤳�ȡ�
- *    (b) �����ۤη��֤��̤�������ˡ�ˤ�äơ�TOPPERS�ץ��������Ȥ�
- *        ��𤹤뤳�ȡ�
- *  (4) �ܥ��եȥ����������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������뤤���ʤ�»
- *      ������⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ����դ��뤳�ȡ�
- *      �ޤ����ܥ��եȥ������Υ桼���ޤ��ϥ���ɥ桼������Τ����ʤ���
- *      ͳ�˴�Ť����ᤫ��⡤�嵭����Ԥ����TOPPERS�ץ��������Ȥ�
- *      ���դ��뤳�ȡ�
+ *  上記著作権者は，以下の(1)~(4)の条件を満たす場合に限り，本ソフトウェ
+ *  ア（本ソフトウェアを改変したものを含む．以下同じ）を使用・複製・改
+ *  変・再配布（以下，利用と呼ぶ）することを無償で許諾する．
+ *  (1) 本ソフトウェアをソースコードの形で利用する場合には，上記の著作
+ *      権表示，この利用条件および下記の無保証規定が，そのままの形でソー
+ *      スコード中に含まれていること．
+ *  (2) 本ソフトウェアを，ライブラリ形式など，他のソフトウェア開発に使
+ *      用できる形で再配布する場合には，再配布に伴うドキュメント（利用
+ *      者マニュアルなど）に，上記の著作権表示，この利用条件および下記
+ *      の無保証規定を掲載すること．
+ *  (3) 本ソフトウェアを，機器に組み込むなど，他のソフトウェア開発に使
+ *      用できない形で再配布する場合には，次のいずれかの条件を満たすこ
+ *      と．
+ *    (a) 再配布に伴うドキュメント（利用者マニュアルなど）に，上記の著
+ *        作権表示，この利用条件および下記の無保証規定を掲載すること．
+ *    (b) 再配布の形態を，別に定める方法によって，TOPPERSプロジェクトに
+ *        報告すること．
+ *  (4) 本ソフトウェアの利用により直接的または間接的に生じるいかなる損
+ *      害からも，上記著作権者およびTOPPERSプロジェクトを免責すること．
+ *      また，本ソフトウェアのユーザまたはエンドユーザからのいかなる理
+ *      由に基づく請求からも，上記著作権者およびTOPPERSプロジェクトを
+ *      免責すること．
  *
- *  �ܥ��եȥ������ϡ�AUTOSAR��AUTomotive Open System ARchitecture�˻�
- *  �ͤ˴�Ť��Ƥ��롥�嵭�ε����ϡ�AUTOSAR����Ū�⻺������������Τ�
- *  �Ϥʤ���AUTOSAR�ϡ�AUTOSAR���ͤ˴�Ť������եȥ�����������Ū����
- *  �Ѥ���Ԥ��Ф��ơ�AUTOSAR�ѡ��ȥʡ��ˤʤ뤳�Ȥ���Ƥ��롥
+ *  本ソフトウェアは，AUTOSAR（AUTomotive Open System ARchitecture）仕
+ *  様に基づいている．上記の許諾は，AUTOSARの知的財産権を許諾するもので
+ *  はない．AUTOSARは，AUTOSAR仕様に基づいたソフトウェアを商用目的で利
+ *  用する者に対して，AUTOSARパートナーになることを求めている．
  *
- *  �ܥ��եȥ������ϡ�̵�ݾڤ��󶡤���Ƥ����ΤǤ��롥�嵭����Ԥ�
- *  ���TOPPERS�ץ��������Ȥϡ��ܥ��եȥ������˴ؤ��ơ�����λ�����Ū
- *  ���Ф���Ŭ������ޤ�ơ������ʤ��ݾڤ�Ԥ�ʤ����ޤ����ܥ��եȥ���
- *  �������Ѥˤ��ľ��Ū�ޤ��ϴ���Ū�������������ʤ�»���˴ؤ��Ƥ⡤��
- *  ����Ǥ�����ʤ���
+ *  本ソフトウェアは，無保証で提供されているものである．上記著作権者お
+ *  よびTOPPERSプロジェクトは，本ソフトウェアに関して，特定の使用目的
+ *  に対する適合性も含めて，いかなる保証も行わない．また，本ソフトウェ
+ *  アの利用により直接的または間接的に生じたいかなる損害に関しても，そ
+ *  の責任を負わない．
  *
  *  $Id: sample1.c 1801 2015-03-27 06:34:43Z t_ishikawa $
  */
 
 /*
- *		����ץ�ץ������(1)������
+ *		サンプルプログラム(1)の本体
  *
- *  ATK2-SC1�δ���Ū��ư����ǧ���뤿��Υ���ץ�ץ������
+ *  ATK2-SC1の基本的な動作を確認するためのサンプルプログラム
  *
- *  �ץ������γ��ס�PC�ȥܡ��ɴ֤ǥ��ꥢ���̿���Ԥ����桼������
- *  ���ޥ�ɤ˱�����ư��ȥ������Ϥ�Ԥʤ�
+ *  プログラムの概要：PCとボード間でシリアル通信を行い，ユーザ入力
+ *  コマンドに応じた動作とログ出力を行なう
  *
- *  �㥳�ޥ�ɰ�����
- *  ������������
- *    '1' : �ʹߤΥ��ޥ�ɤ� Task1 ���Ф��ƹԤ�
- *    '2' : �ʹߤΥ��ޥ�ɤ� Task2 ���Ф��ƹԤ�
- *    '3' : �ʹߤΥ��ޥ�ɤ� Task3 ���Ф��ƹԤ�
- *    '4' : �ʹߤΥ��ޥ�ɤ� Task4 ���Ф��ƹԤ�
- *    '5' : �ʹߤΥ��ޥ�ɤ� Task5 ���Ф��ƹԤ�
- *  ��������������ǽ
- *    'a' : ActivateTask �ˤƥ�������ư���롥
- *    'A' : TerminateTask �ˤƥ�������λ���롥
- *    '!'(Shift+1) : ChainTask �ˤƥ�������λ����Task1 ��ư����
- *    '"'(Shift+2) : ChainTask �ˤƥ�������λ����Task2 ��ư����
- *    '#'(Shift+3) : ChainTask �ˤƥ�������λ����Task3 ��ư����
- *    '$'(Shift+4) : ChainTask �ˤƥ�������λ����Task4 ��ư����
- *    '%'(Shift+5) : ChainTask �ˤƥ�������λ����Task5 ��ư����
- *    's' : �Υ�ץꥨ��ץƥ���°���Ǥ��륿���� MainTask �ˤƺǹ�
- *          ͥ���٥����� HighPriorityTask ��ư����Schedule �ˤ�
- *          �ƥ������塼��󥰤�Ԥ�
- *    'S' : �Υ�ץꥨ��ץƥ��֥����� NonPriTask ��ư����
- *          �Υ�ץꥨ��ץƥ��֥����� NonPriTask �ˤƺǹ�ͥ����
- *          ������ HighPriorityTask ��ư������������λ����
- *    'z' : �¹���Υ��������� GetTaskID ��¹Ԥ��ơ��¹Ծ��֤� TaskID ���������
- *    'Z' : �ᥤ�󥿥������� GetTaskState ��¹Ԥ��ơ��оݥ������ξ��֤��������
- *    'x' : div̿���¹Ԥ��ơ�̤���̿���㳰��ȯ��������
- *  ������ߴ�����ǽ
- *    'd' : DisableAllInterrupts ��¹Ը塤�ϡ��ɥ������������ͤ�
- *          3��ɽ������ EnableAllInterrupts ��¹Ԥ���
- *    'D' : SuspendAllInterrupts ��¹Ը塤�ϡ��ɥ������������ͤ�
- *          3��ɽ����������� SuspendAllInterrupts ��¹Ը塤�ϡ���
- *          �������������ͤ�3��ɽ������ResumeAllInterrupts ��¹Ը塤
- *          �ϡ��ɥ������������ͤ�3��ɽ������ResumeAllInterrupts ��
- *          �¹Ԥ���
- *    'f' : SuspendOSInterrupts ��¹Ը塤�ϡ��ɥ������������ͤ�
- *          3��ɽ����������� SuspendOSInterrupts ��¹Ը塤�ϡ���
- *          �������������ͤ�3��ɽ����������� SuspendAllInterrupts
- *          ��¹Ը塤�ϡ��ɥ������������ͤ�3��ɽ������
- *          ResumeAllInterrupts ��¹Ը塤�ϡ��ɥ����������󥿤�3��
- *          ɽ������ResumeOSInterrupts ��¹Ը�ϡ��ɥ�����������
- *          �ͤ�3��ɽ������ResumeOSInterrupts ��¹Ԥ���
- *    'T' : �ϡ��ɥ������������ͤ�3��ɽ������
- *  ���꥽����������ǽ
- *    'k' : GetResource �ˤƥ꥽���� TskLevelRes ��������롥�ʤ���
- *          Task3 �ϡ����Υ꥽�������ͥ���٤��⤤���ᥨ�顼�Ȥʤ�
- *    'K' : ReleaseResource �ˤƥ꥽���� TskLevelRes ���������
- *    'i' : GetResource �ˤƥ꥽���� CntRes ������塤�ϡ��ɥ�����
- *          �������ͤ�3��ɽ������ReleaseResource �ˤƥ꥽����
- *          CntRes ���������
- *  �����٥�����浡ǽ
- *    'e' : SetEvent �ˤƥ��٥�Ȥ����ꤹ�롥Task2 �� Task3 �ʳ���
- *          ������Ƥ��ʤ����ᥨ�顼�Ȥʤ�
- *    'w' : ClearEvent �ˤƼ��������Υ��٥�Ȥ򥯥ꥢ���롥Task2 ��
- *          Task3 �ʳ��ϳ�����Ƥ��ʤ����ᥨ�顼�Ȥʤ�
- *    'E' : GetEvent �ˤƥ��٥�Ⱦ��֤�������롥Task2 �� Task3
- *          �ʳ��ϳ�����Ƥ��ʤ����ᥨ�顼�Ȥʤ�
- *    'W' : WaitEvent �ˤƼ��������Υ��٥�Ȥ��Ԥġ�Task3 �� Task4
- *          �ʳ��ϥ��顼�Ȥʤ�
- *  �����顼�ൡǽ
- *    'b' : GetAlarmBase �ˤƥ��顼�� MainCycArm �Υ��顼��١���
- *          ������������
- *    'B' : GetAlarm �ˤƥ��顼�� MainCycArm �λĤꥫ������ͤ�2��
- *          Ϣ³�Ǽ�������
- *    'v' : SetRelAlarm �ˤƥ��顼�� ActTskArm ��ư����500ms ���
- *          ������ Task1 ��ư����
- *    'V' : SetRelAlarm �ˤƥ��顼�� SetEvtArm ��ư����500ms ���
- *          ���٥�� T3Evt �����ꤹ��
- *    'n' : SetRelAlarm �ˤƥ��顼�� CallBackArm �򡤥ѥ�᡼��
- *          900ms �����λ��ñȯ���顼���������ꤹ��
- *    'N' : SetRelAlarm �ˤƥ��顼�� CallBackArm �򡤥ѥ�᡼��
- *          900ms �����λ�� 500ms �������顼���������ꤹ��
- *    'm' : SetAbsAlarm �ˤƥ��顼�� CallBackArm �򡤥ѥ�᡼��
- *          ��������900����λ��ñȯ���顼���������ꤹ��
- *    'M' : SetAbsAlarm �ˤƥ��顼�� CallBackArm �򡤥ѥ�᡼��
- *          ��������900����λ�� 500ms �������顼������ꤹ��
- *    'h' : CancelAlarm �ˤƥ��顼�� CallBackArm �򥭥�󥻥뤹��
- *  ����������ǽ
- *    'c' : �������ˤ� IncrementCounter ��¹Ԥ��������� SampleCnt
- *          �˥����ʥ����Τ���
- *          1 �����ʥ�ǥ��顼�� SampleArm ����λ����������Хå���
- *          �¹Ԥ���
- *    'C' : �������ˤ� IncrementCounter ��¹Ԥ��������� SampleCnt2
- *          �˥����ʥ����Τ���
- *          1 �����ʥ�ǥ��顼�� SampleArm1 ����λ����SampleCnt3 ��
- *          ���󥯥���Ȥ��롥 SampleCnt3 �� 1 �����ʥ�� SampleAlm2
- *          ����λ��������Хå���¹Ԥ���
- *    'j' : �������ˤ� GetCounterValue ��¹Ԥ���
- *          ���������ͤ���¸����
- *    'J' : �������ˤ� GetEalsedCounterValue ��¹Ԥ���
- *          �����ͤ������GetCounterValue �ޤ��� GetEalsedCounterValue �ˤƼ���
- *          �����ͤȤ��롥��󡤤ޤ��ϡ�GetCounterValue��¹Ԥ��Ƥ��ʤ�����0
- *          �Ȥ���
+ *  ＜コマンド一覧＞
+ *  ・タスク指定
+ *    '1' : 以降のコマンドを Task1 に対して行う
+ *    '2' : 以降のコマンドを Task2 に対して行う
+ *    '3' : 以降のコマンドを Task3 に対して行う
+ *    '4' : 以降のコマンドを Task4 に対して行う
+ *    '5' : 以降のコマンドを Task5 に対して行う
+ *  ・タスク管理機能
+ *    'a' : ActivateTask にてタスクを起動する．
+ *    'A' : TerminateTask にてタスクを終了する．
+ *    '!'(Shift+1) : ChainTask にてタスクを終了し，Task1 を起動する
+ *    '"'(Shift+2) : ChainTask にてタスクを終了し，Task2 を起動する
+ *    '#'(Shift+3) : ChainTask にてタスクを終了し，Task3 を起動する
+ *    '$'(Shift+4) : ChainTask にてタスクを終了し，Task4 を起動する
+ *    '%'(Shift+5) : ChainTask にてタスクを終了し，Task5 を起動する
+ *    's' : ノンプリエンプティブ属性であるタスク MainTask にて最高
+ *          優先度タスク HighPriorityTask を起動し，Schedule にて
+ *          再スケジューリングを行う
+ *    'S' : ノンプリエンプティブタスク NonPriTask を起動する
+ *          ノンプリエンプティブタスク NonPriTask にて最高優先度
+ *          タスク HighPriorityTask を起動し，タスク終了する
+ *    'z' : 実行中のタスクから GetTaskID を実行して，実行状態の TaskID を取得する
+ *    'Z' : メインタスクから GetTaskState を実行して，対象タスクの状態を取得する
+ *    'x' : div命令を実行して，未定義命令例外を発生させる
+ *  ・割込み管理機能
+ *    'd' : DisableAllInterrupts を実行後，ハードウェアカウンタ値を
+ *          3回表示し， EnableAllInterrupts を実行する
+ *    'D' : SuspendAllInterrupts を実行後，ハードウェアカウンタ値を
+ *          3回表示し，さらに SuspendAllInterrupts を実行後，ハード
+ *          ウェアカウンタ値を3回表示し，ResumeAllInterrupts を実行後，
+ *          ハードウェアカウンタ値を3回表示し，ResumeAllInterrupts を
+ *          実行する
+ *    'f' : SuspendOSInterrupts を実行後，ハードウェアカウンタ値を
+ *          3回表示し，さらに SuspendOSInterrupts を実行後，ハード
+ *          ウェアカウンタ値を3回表示し，さらに SuspendAllInterrupts
+ *          を実行後，ハードウェアカウンタ値を3回表示し，
+ *          ResumeAllInterrupts を実行後，ハードウェアカウンタを3回
+ *          表示し，ResumeOSInterrupts を実行後ハードウェアカウンタ
+ *          値を3回表示し，ResumeOSInterrupts を実行する
+ *    'T' : ハードウェアカウンタ値を3回表示する
+ *  ・リソース管理機能
+ *    'k' : GetResource にてリソース TskLevelRes を取得する．なお，
+ *          Task3 は，このリソースより優先度が高いためエラーとなる
+ *    'K' : ReleaseResource にてリソース TskLevelRes を解放する
+ *    'i' : GetResource にてリソース CntRes を取得後，ハードウェア
+ *          カウンタ値を3回表示し，ReleaseResource にてリソース
+ *          CntRes を解放する
+ *  ・イベント制御機能
+ *    'e' : SetEvent にてイベントを設定する．Task2 と Task3 以外は
+ *          割り当てがないためエラーとなる
+ *    'w' : ClearEvent にて自タスクのイベントをクリアする．Task2 と
+ *          Task3 以外は割り当てがないためエラーとなる
+ *    'E' : GetEvent にてイベント状態を取得する．Task2 と Task3
+ *          以外は割り当てがないためエラーとなる
+ *    'W' : WaitEvent にて自タスクのイベントを待つ．Task3 と Task4
+ *          以外はエラーとなる
+ *  ・アラーム機能
+ *    'b' : GetAlarmBase にてアラーム MainCycArm のアラームベース
+ *          情報を取得する
+ *    'B' : GetAlarm にてアラーム MainCycArm の残りカウント値を2回
+ *          連続で取得する
+ *    'v' : SetRelAlarm にてアラーム ActTskArm を起動し，500ms 後に
+ *          タスク Task1 を起動する
+ *    'V' : SetRelAlarm にてアラーム SetEvtArm を起動し，500ms 後に
+ *          イベント T3Evt を設定する
+ *    'n' : SetRelAlarm にてアラーム CallBackArm を，パラメータ
+ *          900ms 後に満了・単発アラーム指定で設定する
+ *    'N' : SetRelAlarm にてアラーム CallBackArm を，パラメータ
+ *          900ms 後に満了・ 500ms 周期アラーム指定で設定する
+ *    'm' : SetAbsAlarm にてアラーム CallBackArm を，パラメータ
+ *          カウンタ値900に満了・単発アラーム指定で設定する
+ *    'M' : SetAbsAlarm にてアラーム CallBackArm を，パラメータ
+ *          カウンタ値900に満了・ 500ms 周期アラームで設定する
+ *    'h' : CancelAlarm にてアラーム CallBackArm をキャンセルする
+ *  ・カウンタ操作機能
+ *    'c' : タスクにて IncrementCounter を実行し，カウンタ SampleCnt
+ *          にシグナル通知する
+ *          1 シグナルでアラーム SampleArm が満了し，コールバックを
+ *          実行する
+ *    'C' : タスクにて IncrementCounter を実行し，カウンタ SampleCnt2
+ *          にシグナル通知する
+ *          1 シグナルでアラーム SampleArm1 が満了し，SampleCnt3 を
+ *          インクリメントする． SampleCnt3 は 1 シグナルで SampleAlm2
+ *          が満了しコールバックを実行する
+ *    'j' : タスクにて GetCounterValue を実行する
+ *          取得した値は保存する
+ *    'J' : タスクにて GetEalsedCounterValue を実行する
+ *          元の値は前回のGetCounterValue または GetEalsedCounterValue にて取得
+ *          した値とする．初回，または，GetCounterValueを実行していない場合は0
+ *          とする
  *
- *    'r' : �������ˤ� GetISRID��¹Ԥ���
- *          ����������ƥ����Ȥ����GetISRID��ƽФ������ϥ��顼�Ȥ���
- *          INVALID_ISR���ֵѤ����
+ *    'r' : タスクにて GetISRIDを実行する
+ *          タスクコンテキストからはGetISRIDを呼出した場合はエラーとして
+ *          INVALID_ISRが返却される
  *
- *          ����ߥ���ƥ����Ȥ����GetISRIDȯ�Ԥϡ�SystemTimerCnt�Υ�����Хå�
- *          �롼�����'n' ���ޥ�ɤǼ¹ԡˤˤƹԤ�
+ *          割込みコンテキストからのGetISRID発行は，SystemTimerCntのコールバック
+ *          ルーチン（'n' コマンドで実行）にて行う
  *
- *          ����������ƥ����Ȥ����GetISRIDȯ�Ԥϡ�SampleCnt2�Υ�����Хå�
- *          �롼�����'C' �ޤ��� 'c' ���ޥ�ɤǼ¹ԡˤˤƹԤ�
+ *          タスクコンテキストからのGetISRID発行は，SampleCnt2のコールバック
+ *          ルーチン（'C' または 'c' コマンドで実行）にて行う
  *
- *  ���������塼��ơ��֥����浡ǽ
- *    't' : �������塼��ơ��֥�ư������ON/OFF
+ *  ・スケジュールテーブル制御機能
+ *    't' : スケジュールテーブル動作制御ON/OFF
  *
- *        'i' : SchtblSampleCnt�����󥿤򥤥󥯥���Ȥ���
- *              SchtblSampleCnt�����󥿤ϥ������塼��ơ��֥�ζ�ư������
- *        '1' : �ʹߤΥ��ޥ�ɤ� scheduletable1 ���Ф��ƹԤ�(�ǥե������)
- *        '2' : �ʹߤΥ��ޥ�ɤ� scheduletable2 ���Ф��ƹԤ���
- *        '3' : �ʹߤΥ��ޥ�ɤ� scheduletable3(¸�ߤ��ʤ�ID) ���Ф��ƹԤ�
- *              ���ޥ�ɤΥ��顼��ǧ�ˤ���Ѥ���
- *        's' : StartScheduleTableRel��¹Ԥ���������(5)�ǥ������塼��ơ��֥�򳫻Ϥ���
- *        'S' : StartScheduleTableAbs��¹Ԥ���������(5)�ǥ������塼��ơ��֥�򳫻Ϥ���
- *        'f' : StopScheduleTable��¹Ԥ����������塼��ơ��֥����ߤ���
- *        'n' : NextScheduleTable��¹Ԥ���scheduletable2�����ؤ���
- *        'N' : NextScheduleTable��¹Ԥ���scheduletable1�����ؤ���
- *        'g' : GetScheduleTableStatus��¹Ԥ����������塼��ơ��֥���֤��������
- *        'q' : ShutdownOS( E_OK ) OS�¹����浡ǽ��'q'��Ʊ����ǽ
- *        'Q' : ShutdownOS( E_OS_STATE ) OS�¹����浡ǽ��'Q'��Ʊ����ǽ
+ *        'i' : SchtblSampleCntカウンタをインクリメントする
+ *              SchtblSampleCntカウンタはスケジュールテーブルの駆動カウンタ
+ *        '1' : 以降のコマンドを scheduletable1 に対して行う(デフォルト値)
+ *        '2' : 以降のコマンドを scheduletable2 に対して行う．
+ *        '3' : 以降のコマンドを scheduletable3(存在しないID) に対して行う
+ *              コマンドのエラー確認にも使用する
+ *        's' : StartScheduleTableRelを実行し，相対値(5)でスケジュールテーブルを開始する
+ *        'S' : StartScheduleTableAbsを実行し，絶対値(5)でスケジュールテーブルを開始する
+ *        'f' : StopScheduleTableを実行し，スケジュールテーブルを停止する
+ *        'n' : NextScheduleTableを実行し，scheduletable2に切替える
+ *        'N' : NextScheduleTableを実行し，scheduletable1に切替える
+ *        'g' : GetScheduleTableStatusを実行し，スケジュールテーブル状態を取得する
+ *        'q' : ShutdownOS( E_OK ) OS実行制御機能の'q'と同等機能
+ *        'Q' : ShutdownOS( E_OS_STATE ) OS実行制御機能の'Q'と同等機能
  *
- *  ��OS�¹����浡ǽ
- *    'p' : GetActiveApplicationMode �ˤƥ��ץꥱ�������⡼�ɤ�
- *          ��������
- *    'q' : ShutdownOS �򥳡��� E_OK �Ǽ¹Ԥ�������ץ�ץ�������
- *          ��λ����
- *    'Q' : ShutdownOS �򥳡��� E_OS_STATE �Ǽ¹Ԥ�������ץ�ץ������
- *          ��λ����
+ *  ・OS実行制御機能
+ *    'p' : GetActiveApplicationMode にてアプリケーションモードを
+ *          取得する
+ *    'q' : ShutdownOS をコード E_OK で実行し，サンプルプログラムを
+ *          終了する
+ *    'Q' : ShutdownOS をコード E_OS_STATE で実行し，サンプルプログラム
+ *          を終了する
  *
- *  �㥪�֥������Ȱ�����
- *  ��OS
- *    �������ȥ��åץեå�������
- *    ����åȥ�����եå�������
- *    ���顼�եå�������
- *    �ץ쥿�����եå���̤����
- *    �ݥ��ȥ������եå���̤����
- *  ��������
- *  �ᥤ�󥿥���
- *    ������ID��MainTask
- *    ͥ���١�14
- *    ¿�ŵ�ư����1
- *    �������塼�롧�Υ�ץꥨ��ץƥ���
- *    ��ư��ư��AppMode1, AppMode2, AppMode3
- *    ���ס��桼�����󥿥ե������ʥ��ꥢ��IO��ꥳ�ޥ�ɤ��������
- *          ������б�����ư���Ԥʤ���
- *          �������顼�� MainCycArm �ˤ�ꡤ10ms���Ȥ��Ԥ������
- *          ���ޥ�ɤμ���̵ͭ��ݡ���󥰤���
- *          ���٥�ȡ�ID��MainEvt�ˤ��Ϣ�դ��Ƥ���
- *  �ǹ�ͥ���٥�����
- *    ������ID��HighPriorityTask
- *    ͥ���١�15
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���ư��������Ϥ��ƽ�λ���롥�Υ�ץꥨ��ץƥ��֥�����
- *          ���鵯ư���졤�ץꥨ��ץȤ��Ƥ��뤫�ɤ����γ�ǧ��
- *  �Υ�ץꥨ��ץƥ��֥�����
- *    ������ID��NonPriTask
- *    ͥ���١�1
- *    ¿�ŵ�ư����8
- *    �������塼�롧�Υ�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���ư��������Ϥ����ǹ�ͥ���٥����� HighPriorityTask ��
- *          ��ư�塤��λ��������Ϥ��ƥ�������λ����
- *  ������1
- *    ������ID��Task1
- *    ͥ���١�4
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư��AppMode2
- *    ¿�ŵ�ư����8
- *    ���ס���������������ʥᥤ�󥿥�������λ���ˤ��ư���
- *          ��ư���줹���̵�¥롼�פ����ꡤ���ޥ�ɽ�����¹Ԥ���
- *          �꥽���� TskLevelRes ���Ϣ�դ��Ƥ���
- *          �꥽���� CntRes ���Ϣ�դ��Ƥ���
- *  ������2
- *    ������ID��Task2
- *    ͥ���١�7
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���������������ʥᥤ�󥿥�������λ���ˤ��ư���
- *          ��ư���줹���̵�¥롼�פ����ꡤ���ޥ�ɽ�����¹Ԥ���
- *          �꥽���� TskLevelRes ���Ϣ�դ��Ƥ���
- *          �꥽���� CntRes ���Ϣ�դ��Ƥ���
- *          ���٥�� T2Evt ���Ϣ�դ��Ƥ���
- *  ������3
- *    ������ID��Task3
- *    ͥ���١�12
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư��AppMode3
- *    ���ס���������������ʥᥤ�󥿥�������λ���ˤ��ư���
- *          ��ư���줹���̵�¥롼�פ����ꡤ���ޥ�ɽ�����¹Ԥ���
- *          ���٥���Ԥ����뤳�Ȥ���ǽ�Ǥ���
- *          �꥽���� CntRes ���Ϣ�դ��Ƥ���
- *          ���٥�� T3Evt ���Ϣ�դ��Ƥ���
- *  ������4
- *    ������ID��Task4
- *    ͥ���١�6
- *    ¿�ŵ�ư����5
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���������������ʥᥤ�󥿥�������λ���ˤ��ư���
- *          ��ư���줹���̵�¥롼�פ����ꡤ���ޥ�ɽ�����¹Ԥ���
- *          �꥽���� TskLevelRes ���Ϣ�դ��Ƥ���
- *          �꥽���� CntRes ���Ϣ�դ��Ƥ���
- *          �����꥽���� GroupRes ���Ϣ�դ��Ƥ���
- *  ������5
- *    ������ID��Task5
- *    ͥ���١�9
- *    ¿�ŵ�ư����5
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���������������ʥᥤ�󥿥�������λ���ˤ��ư���
- *          ��ư���줹���̵�¥롼�פ����ꡤ���ޥ�ɽ�����¹Ԥ���
- *          �꥽���� TskLevelRes ���Ϣ�դ��Ƥ���
- *          �꥽���� CntRes ���Ϣ�դ��Ƥ���
- *          �����꥽���� GroupRes ���Ϣ�դ��Ƥ���
- *  ������6
- *    ������ID��Task6
- *    ͥ���١�14
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���ư��å��������Ϥ������٥��(T6Evt)���Ԥ�
- *  ������7
- *    ������ID��Task7
- *    ͥ���١�14
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���ư��å��������Ϥ������٥��(T7Evt)���Ԥ�
- *  ������8
- *    ������ID��Task8
- *    ͥ���١�14
- *    ¿�ŵ�ư����1
- *    �������塼�롧�ե�ץꥨ��ץƥ���
- *    ��ư��ư���ʤ�
- *    ���ס���ư��å��������Ϥ������٥��(T8Evt)���Ԥ�
+ *  ＜オブジェクト一覧＞
+ *  ・OS
+ *    スタートアップフック：使用
+ *    シャットダウンフック：使用
+ *    エラーフック：使用
+ *    プレタスクフック：未使用
+ *    ポストタスクフック：未使用
+ *  ・タスク
+ *  メインタスク
+ *    タスクID：MainTask
+ *    優先度：14
+ *    多重起動数：1
+ *    スケジュール：ノンプリエンプティブ
+ *    自動起動：AppMode1, AppMode2, AppMode3
+ *    概要：ユーザインタフェース（シリアルIOよりコマンドを受信し，
+ *          それに対応した動作を行なう）
+ *          周期アラーム MainCycArm により，10msごとに待ち解除し
+ *          コマンドの受信有無をポーリングする
+ *          イベント（ID：MainEvt）を関連付けている
+ *  最高優先度タスク
+ *    タスクID：HighPriorityTask
+ *    優先度：15
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：起動ログを出力して終了する．ノンプリエンプティブタスク
+ *          から起動され，プリエンプトしているかどうかの確認用
+ *  ノンプリエンプティブタスク
+ *    タスクID：NonPriTask
+ *    優先度：1
+ *    多重起動数：8
+ *    スケジュール：ノンプリエンプティブ
+ *    自動起動：なし
+ *    概要：起動ログを出力し，最高優先度タスク HighPriorityTask を
+ *          起動後，終了ログを出力してタスクを終了する
+ *  タスク1
+ *    タスクID：Task1
+ *    優先度：4
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：AppMode2
+ *    多重起動数：8
+ *    概要：並列処理タスク（メインタスクからの指令により動作）
+ *          起動されすると無限ループに入り，コマンド処理を実行する
+ *          リソース TskLevelRes を関連付けている
+ *          リソース CntRes を関連付けている
+ *  タスク2
+ *    タスクID：Task2
+ *    優先度：7
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：並列処理タスク（メインタスクからの指令により動作）
+ *          起動されすると無限ループに入り，コマンド処理を実行する
+ *          リソース TskLevelRes を関連付けている
+ *          リソース CntRes を関連付けている
+ *          イベント T2Evt を関連付けている
+ *  タスク3
+ *    タスクID：Task3
+ *    優先度：12
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：AppMode3
+ *    概要：並列処理タスク（メインタスクからの指令により動作）
+ *          起動されすると無限ループに入り，コマンド処理を実行する
+ *          イベント待ちすることが可能である
+ *          リソース CntRes を関連付けている
+ *          イベント T3Evt を関連付けている
+ *  タスク4
+ *    タスクID：Task4
+ *    優先度：6
+ *    多重起動数：5
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：並列処理タスク（メインタスクからの指令により動作）
+ *          起動されすると無限ループに入り，コマンド処理を実行する
+ *          リソース TskLevelRes を関連付けている
+ *          リソース CntRes を関連付けている
+ *          内部リソース GroupRes を関連付けている
+ *  タスク5
+ *    タスクID：Task5
+ *    優先度：9
+ *    多重起動数：5
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：並列処理タスク（メインタスクからの指令により動作）
+ *          起動されすると無限ループに入り，コマンド処理を実行する
+ *          リソース TskLevelRes を関連付けている
+ *          リソース CntRes を関連付けている
+ *          内部リソース GroupRes を関連付けている
+ *  タスク6
+ *    タスクID：Task6
+ *    優先度：14
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：起動メッセージ出力し，イベント(T6Evt)を待ち
+ *  タスク7
+ *    タスクID：Task7
+ *    優先度：14
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：起動メッセージ出力し，イベント(T7Evt)を待ち
+ *  タスク8
+ *    タスクID：Task8
+ *    優先度：14
+ *    多重起動数：1
+ *    スケジュール：フルプリエンプティブ
+ *    自動起動：なし
+ *    概要：起動メッセージ出力し，イベント(T8Evt)を待ち
  *
- *  ������ߥ����ӥ��롼����
- *  ���ꥢ��IO���������
- *    ISRID��RxHwSerialInt
- *    ͥ���١�2
- *    ���ƥ��ꡧ2
- *    ���ס����ޥ�ɤ��������
- *  ���꥽����
- *  ��������٥�꥽����
- *    �꥽����ID��TskLevelRes
- *    �ץ��ѥƥ���ɸ��
- *  �������ѥ����󥿥꥽����
- *    �꥽����ID��CntRes
- *    �ץ��ѥƥ���ɸ��
- *  ���������롼�ץ꥽����
- *    �꥽����ID��GroupRes
- *    �ץ��ѥƥ�������
- *  �����٥��
- *  �ᥤ�󥿥������٥��
- *    ���٥��ID��MainEvt
- *  ������2���٥��
- *    ���٥��ID��T2Evt
- *  ������3���٥��
- *    ���٥��ID��T3Evt
- *  ��������
- *  �����ƥॿ���ޥ�����
- *    ������ID��MAIN_HW_COUNTER
- *    ��������͡�0���999
- *    �û��͡�1
- *  ����ץ륫����
- *    ������ID��SampleCnt
- *    ��������͡�0���99
- *    �û��͡�10
- *  �����顼��
- *  �ᥤ��������顼��
- *    ���顼��ID��MainCycArm
- *    �١���������ID��MAIN_HW_COUNTER
- *    ��������󡧥��٥������ MainEvt
- *    ��ư��ư���ʤ�
- *  ��������ư���顼��
- *    ���顼��ID��ActTskArm
- *    �١���������ID��MAIN_HW_COUNTER
- *    ��������󡧥�������ư Task1
- *    ��ư��ư���ʤ�
- *  ���٥�����ꥢ�顼��
- *    ���顼��ID��SetEvtArm
- *    �١���������ID��MAIN_HW_COUNTER
- *    ��������󡧥��٥������ T3Evt
- *    ��ư��ư���ʤ�
- *  ������Хå��¹ԥ��顼��
- *    ���顼��ID��CallBackArm
- *    �١���������ID��MAIN_HW_COUNTER
- *    ��������󡧥�����Хå��ؿ��¹�
- *    ��ư��ư���ʤ�
- *  IncrementCounter��ǧ�ѥ��顼��
- *    ���顼��ID��SampleArm
- *    �١���������ID��SampleCnt
- *    ��������󡧥�����Хå��ؿ��¹�
- *    ��ư��ư���ʤ�
- *  �����ץꥱ�������⡼��
- *  ��ư��ư�ʤ��⡼��
- *    ���ץꥱ�������⡼��ID��AppMode1
- *  Task1��ư��ư�⡼��
- *    ���ץꥱ�������⡼��ID��AppMode2
- *  Task3��ư��ư�⡼��
- *    ���ץꥱ�������⡼��ID��AppMode3
+ *  ・割込みサービスルーチン
+ *  シリアルIO受信割込み
+ *    ISRID：RxHwSerialInt
+ *    優先度：2
+ *    カテゴリ：2
+ *    概要：コマンドを受信する
+ *  ・リソース
+ *  タスクレベルリソース
+ *    リソースID：TskLevelRes
+ *    プロパティ：標準
+ *  タスク用カウンタリソース
+ *    リソースID：CntRes
+ *    プロパティ：標準
+ *  タスクグループリソース
+ *    リソースID：GroupRes
+ *    プロパティ：内部
+ *  ・イベント
+ *  メインタスクイベント
+ *    イベントID：MainEvt
+ *  タスク2イベント
+ *    イベントID：T2Evt
+ *  タスク3イベント
+ *    イベントID：T3Evt
+ *  ・カウンタ
+ *  システムタイマカウンタ
+ *    カウンタID：MAIN_HW_COUNTER
+ *    カウント値：0~999
+ *    加算値：1
+ *  サンプルカウンタ
+ *    カウンタID：SampleCnt
+ *    カウント値：0~99
+ *    加算値：10
+ *  ・アラーム
+ *  メイン周期アラーム
+ *    アラームID：MainCycArm
+ *    ベースカウンタID：MAIN_HW_COUNTER
+ *    アクション：イベント設定 MainEvt
+ *    自動起動：なし
+ *  タスク起動アラーム
+ *    アラームID：ActTskArm
+ *    ベースカウンタID：MAIN_HW_COUNTER
+ *    アクション：タスク起動 Task1
+ *    自動起動：なし
+ *  イベント設定アラーム
+ *    アラームID：SetEvtArm
+ *    ベースカウンタID：MAIN_HW_COUNTER
+ *    アクション：イベント設定 T3Evt
+ *    自動起動：なし
+ *  コールバック実行アラーム
+ *    アラームID：CallBackArm
+ *    ベースカウンタID：MAIN_HW_COUNTER
+ *    アクション：コールバック関数実行
+ *    自動起動：なし
+ *  IncrementCounter確認用アラーム
+ *    アラームID：SampleArm
+ *    ベースカウンタID：SampleCnt
+ *    アクション：コールバック関数実行
+ *    自動起動：なし
+ *  ・アプリケーションモード
+ *  自動起動なしモード
+ *    アプリケーションモードID：AppMode1
+ *  Task1自動起動モード
+ *    アプリケーションモードID：AppMode2
+ *  Task3自動起動モード
+ *    アプリケーションモードID：AppMode3
  *
  */
 
@@ -387,13 +387,13 @@
 #define GetAppModeInfo()	(0)
 
 /*
- *  �ե�����̾�����ֹ�λ����Ѥ��ѿ�
+ *  ファイル名，行番号の参照用の変数
  */
-extern const char8	*kernel_fatal_file_name;    /* �ե�����̾ */
-extern sint32		kernel_fatal_line_num;      /* ���ֹ� */
+extern const char8	*kernel_fatal_file_name;    /* ファイル名 */
+extern sint32		kernel_fatal_line_num;      /* 行番号 */
 
 /*
- *  �����ؿ��ץ��ȥ��������
+ *  内部関数プロトタイプ宣言
  */
 sint32 main(void);
 TASK(MainTask);
@@ -437,17 +437,17 @@ static void PutAppMode(void);
 static void schedule_table_sample_routine(void);
 
 /*
- *  �����ǡ����Хåե�
+ *  内部データバッファ
  */
-static volatile uint8		command_tbl[8];         /* ���ޥ�ɰ��Ϥ��ơ��֥� */
+static volatile uint8		command_tbl[8];         /* コマンド引渡しテーブル */
 
 /*
- *  ��������ǡ����ơ��֥�
+ *  内部定数データテーブル
  */
-/* ̵�����٥�ȥޥ����� */
+/* 無効イベントマスク値 */
 #define invalid_mask	(EventMaskType) (0)
 
-/* ���٥�ȥޥ����ơ��֥� */
+/* イベントマスクテーブル */
 static const EventMaskType	event_mask_tbl[] = {
 	invalid_mask,
 	T2Evt,
@@ -456,7 +456,7 @@ static const EventMaskType	event_mask_tbl[] = {
 	invalid_mask
 };
 
-/* ������ID�ơ��֥� */
+/* タスクIDテーブル */
 static const TaskType		task_id_tbl[] = {
 	Task1,
 	Task2,
@@ -465,26 +465,26 @@ static const TaskType		task_id_tbl[] = {
 	Task5
 };
 
-/* ���顼��ID�ơ��֥� */
+/* アラームIDテーブル */
 static const AlarmType		alarm_id_tbl[] = {
 	ActTskArm,
 	SetEvtArm,
 	CallBackArm
 };
 
-/* �ƥ��å��ͥơ��֥� */
+/* ティック値テーブル */
 static const TickType		tick_tbl[] = {
 	(TickType) 500,
 	(TickType) 900
 };
 
-/* ���������ͥơ��֥� */
+/* サイクル値テーブル */
 static const TickType		cycle_tbl[] = {
 	(TickType) 0,
 	(TickType) COUNTER_MIN_CYCLE
 };
 
-/* ���٥�ȥޥ���̾ʸ����ơ��֥� */
+/* イベントマスク名文字列テーブル */
 static const char8			*event_name_tbl[] = {
 	"Invalid",
 	"T2Evt",
@@ -493,7 +493,7 @@ static const char8			*event_name_tbl[] = {
 	"Invalid"
 };
 
-/* ������̾ʸ����ơ��֥� */
+/* タスク名文字列テーブル */
 static const char8			*task_name_tbl[] = {
 	"Task1",
 	"Task2",
@@ -502,7 +502,7 @@ static const char8			*task_name_tbl[] = {
 	"Task5"
 };
 
-/* ����������ʸ����ơ��֥� */
+/* タスク状態文字列テーブル */
 static const char8			*task_state_tbl[] = {
 	"SUSPENDED",
 	"RUNNING",
@@ -510,7 +510,7 @@ static const char8			*task_state_tbl[] = {
 	"WAITING",
 };
 
-/* ���顼��̾ʸ����ơ��֥� */
+/* アラーム名文字列テーブル */
 static const char8			*alarm_name_tbl[] = {
 	"ActTskArm",
 	"SetEvtArm",
@@ -518,11 +518,11 @@ static const char8			*alarm_name_tbl[] = {
 };
 
 /*
- *  API���顼�����ޥ���
+ *  APIエラーログマクロ
  *
- *  ErrorHook��ͭ���ξ���ErrorHook����
- *  ���顼��������Ϥ�, ErrorHook��̵���ξ���
- *  �ʲ��Υޥ�����ꥨ�顼�������Ϥ�Ԥ�
+ *  ErrorHookが有効の場合はErrorHookから
+ *  エラーログを出力し, ErrorHookが無効の場合は
+ *  以下のマクロよりエラーログ出力を行う
  */
 #if defined(CFG_USE_ERRORHOOK)
 #define error_log(api)	(api)
@@ -530,7 +530,7 @@ static const char8			*alarm_name_tbl[] = {
 #define	error_log(api)										   \
 	{														   \
 		StatusType ercd;									   \
-		ercd = api;     /* ��API�¹� */						   \
+		ercd = api;     /* 各API実行 */						   \
 		if (ercd != E_OK) {									   \
 			syslog(LOG_INFO, "Error:%d", atk2_strerror(ercd)); \
 		}													   \
@@ -538,9 +538,9 @@ static const char8			*alarm_name_tbl[] = {
 #endif /* defined( CFG_USE_ERRORHOOK ) */
 
 /*
- *  �桼���ᥤ��ؿ�
+ *  ユーザメイン関数
  *
- *  ���ץꥱ�������⡼�ɤ�Ƚ�Ǥȡ������ͥ뵯ư
+ *  アプリケーションモードの判断と，カーネル起動
  */
 sint32
 main(void)
@@ -548,7 +548,7 @@ main(void)
 	AppModeType	crt_app_mode;
 
 	/*
-	 *  ���ץꥱ�������⡼�ɤ�Ƚ��
+	 *  アプリケーションモードの判断
 	 */
 	switch (GetAppModeInfo()) {
 	case 0:
@@ -563,7 +563,7 @@ main(void)
 	}
 
 	/*
-	 *  �����ͥ뵯ư
+	 *  カーネル起動
 	 */
 	StartOS(crt_app_mode);
 
@@ -572,9 +572,9 @@ main(void)
 }   /* main */
 
 /*
- *  �ᥤ�󥿥���
+ *  メインタスク
  *
- *  �桼�����ޥ�ɤμ����ȡ����ޥ�ɤ��Ȥν����¹�
+ *  ユーザコマンドの受信と，コマンドごとの処理実行
  */
 TASK(MainTask)
 {
@@ -586,7 +586,7 @@ TASK(MainTask)
 	TickType	eval = 0U;
 
 	/*
-	 *  �������ֹ桦���ޥ�ɥХåե������
+	 *  タスク番号・コマンドバッファ初期化
 	 */
 	task_no = (uint8) (0);
 	for (i = 0U; i < (sizeof(command_tbl) / sizeof(command_tbl[0])); i++) {
@@ -594,25 +594,25 @@ TASK(MainTask)
 	}
 
 	/*
-	 *  MainCycArm��������顼��Ȥ�������
+	 *  MainCycArmを周期アラームとして設定
 	 */
 	SetRelAlarm(MainCycArm, TICK_FOR_10MS, TICK_FOR_10MS);
 
 	/*
-	 *  ���ޥ�ɼ¹ԥ롼��
+	 *  コマンド実行ループ
 	 */
 	while (1) {
-		WaitEvent(MainEvt);     /* 10ms�κ�Ȼ����Ԥ� */
+		WaitEvent(MainEvt);     /* 10msの作業時間待ち */
 		ClearEvent(MainEvt);
 
 		/*
-		 *  ���ϥ��ޥ�ɼ���
+		 *  入力コマンド取得
 		 */
 		syslog(LOG_INFO, "Input Command:");
 		command = GetCommand();
 
 		/*
-		 *  ���ϥ��ޥ�ɥ����å�
+		 *  入力コマンドチェック
 		 */
 		if ((command <= (uint8) (0x1fU)) || (command >= (uint8) (0x80U))) {
 			syslog(LOG_INFO, "Not ASCII character");
@@ -623,7 +623,7 @@ TASK(MainTask)
 #endif /* OMIT_ECHO */
 
 			/*
-			 *  ���ޥ��Ƚ��
+			 *  コマンド判別
 			 */
 			switch (command) {
 			case '1':
@@ -632,7 +632,7 @@ TASK(MainTask)
 			case '4':
 			case '5':
 				/*
-				 *  �����оݥ��������ѹ�
+				 *  処理対象タスクの変更
 				 */
 				task_no = (uint8) (command - '1');
 				break;
@@ -650,12 +650,12 @@ TASK(MainTask)
 			case 'w':
 			case 'W':
 				/*
-				 *  �������ؤΥ��ޥ������
+				 *  タスクへのコマンド通知
 				 */
 				command_tbl[task_no] = command;
 				break;
 			/*
-			 *  �ʹߤϥᥤ�󥿥����ǥ��ޥ�ɽ���
+			 *  以降はメインタスクでコマンド処理
 			 */
 			case 'a':
 				PutActTsk(task_no);
@@ -699,31 +699,31 @@ TASK(MainTask)
 				PutArmTick();
 				break;
 			case 'v':
-				/* SetRelAlarm(ActTskArm, 500, 0)��¹� */
+				/* SetRelAlarm(ActTskArm, 500, 0)を実行 */
 				PutSetRel(0U, 0U, 0U);
 				break;
 			case 'V':
-				/* SetRelAlarm(SetEvtArm, 500, 0)��¹� */
+				/* SetRelAlarm(SetEvtArm, 500, 0)を実行 */
 				PutSetRel(1U, 0U, 0U);
 				break;
 			case 'n':
-				/* SetRelAlarm(CallBackArm, 900, 0)��¹� */
+				/* SetRelAlarm(CallBackArm, 900, 0)を実行 */
 				PutSetRel(2U, 1U, 0U);
 				break;
 			case 'N':
-				/* SetRelAlarm(CallBackArm, 900, 500)��¹� */
+				/* SetRelAlarm(CallBackArm, 900, 500)を実行 */
 				PutSetRel(2U, 1U, 1U);
 				break;
 			case 'm':
-				/* SetAbsAlarm(CallBackArm, 900, 0)��¹� */
+				/* SetAbsAlarm(CallBackArm, 900, 0)を実行 */
 				PutSetAbs(2U, 1U, 0U);
 				break;
 			case 'M':
-				/* SetAbsAlarm(CallBackArm, 900, 500)��¹� */
+				/* SetAbsAlarm(CallBackArm, 900, 500)を実行 */
 				PutSetAbs(2U, 1U, 1U);
 				break;
 			case 'h':
-				/* CancelAlarm(CallBackArm)��¹� */
+				/* CancelAlarm(CallBackArm)を実行 */
 				PutCanArm();
 				break;
 			case 'c':
@@ -763,23 +763,23 @@ TASK(MainTask)
 				ShutdownOS(E_OS_STATE);
 				break;
 			default:
-				/* �嵭�Υ��ޥ�ɰʳ��ξ�硤������Ԥ�ʤ� */
+				/* 上記のコマンド以外の場合，処理を行わない */
 				break;
 			}
 		}
 	}
 
 	/*
-	 *  �����ˤϤ��ʤ�
+	 *  ここにはこない
 	 */
 	syslog(LOG_INFO, "MainTask TERMINATE");
 	error_log(TerminateTask());
 }   /* TASK( MainTask ) */
 
 /*
- *  �ǹ�ͥ���٥�����
+ *  最高優先度タスク
  *
- *  �ƥ������Υץꥨ��ץȳ�ǧ��
+ *  各タスクのプリエンプト確認用
  */
 TASK(HighPriorityTask)
 {
@@ -789,9 +789,9 @@ TASK(HighPriorityTask)
 
 
 /*
- *  �Υ�ץꥨ��ץƥ��֥�����
+ *  ノンプリエンプティブタスク
  *
- *  �¹���ϥץꥨ��ץȤ��ʤ����Ȥγ�ǧ��
+ *  実行中はプリエンプトしないことの確認用
  */
 TASK(NonPriTask)
 {
@@ -805,7 +805,7 @@ TASK(NonPriTask)
 
 
 /*
- *  ����¹ԥ�����1
+ *  並列実行タスク1
  */
 TASK(Task1)
 {
@@ -814,7 +814,7 @@ TASK(Task1)
 
 
 /*
- *  ����¹ԥ�����2
+ *  並列実行タスク2
  */
 TASK(Task2)
 {
@@ -823,7 +823,7 @@ TASK(Task2)
 
 
 /*
- *  ����¹ԥ�����3
+ *  並列実行タスク3
  */
 TASK(Task3)
 {
@@ -832,7 +832,7 @@ TASK(Task3)
 
 
 /*
- *  ����¹ԥ�����4
+ *  並列実行タスク4
  */
 TASK(Task4)
 {
@@ -841,7 +841,7 @@ TASK(Task4)
 
 
 /*
- *  ����¹ԥ�����5
+ *  並列実行タスク5
  */
 TASK(Task5)
 {
@@ -850,27 +850,27 @@ TASK(Task5)
 
 
 /*
- *  ����¹ԥ�������������
+ *  並列実行タスク内部処理
  *
- *  �ᥤ�󥿥����������Τ��줿���ޥ�ɤ��Ȥν����¹�
+ *  メインタスクから通知されたコマンドごとの処理実行
  */
 static void
 TaskProk(uint8 task_no)
 {
-	uint8 command;          /* ���ޥ������Хåե� */
+	uint8 command;          /* コマンド退避バッファ */
 
 	/*
-	 *  ��������ư��������
+	 *  タスク起動ログ出力
 	 */
 	syslog(LOG_INFO, "%s ACTIVATE", task_name_tbl[task_no]);
 
 	/*
-	 *  ���ޥ�ɼ¹ԥ롼��
+	 *  コマンド実行ループ
 	 */
 	while (1) {
 
 		/*
-		 *  ���ޥ�ɼ���
+		 *  コマンド取得
 		 */
 		while (command_tbl[task_no] == '\0') {
 		}
@@ -878,7 +878,7 @@ TaskProk(uint8 task_no)
 		command_tbl[task_no] = 0U;
 
 		/*
-		 *  ���ޥ��Ƚ��
+		 *  コマンド判定
 		 */
 		switch (command) {
 		case 'A':
@@ -910,28 +910,28 @@ TaskProk(uint8 task_no)
 			PutWaitEvt(task_no);
 			break;
 		default:
-			/* �嵭�Υ��ޥ�ɰʳ��ξ�硤�����ϹԤ�ʤ� */
+			/* 上記のコマンド以外の場合，処理は行わない */
 			break;
 		}
 	}
 }   /* TaskProk */
 
 /*
- *  ���ޥ�ɼ�������
+ *  コマンド受信処理
  */
 static uint8
 GetCommand(void)
 {
-	uint8 command;          /* ���ޥ�ɼ����Хåե� */
+	uint8 command;          /* コマンド受信バッファ */
 
 	/*
-	 *  ���ޥ�ɤ��������ޤǥ롼��
+	 *  コマンドを受信するまでループ
 	 */
 	command = '\0';
 	do {
-		WaitEvent(MainEvt);     /* 10ms�������� */
+		WaitEvent(MainEvt);     /* 10msウェイト */
 		ClearEvent(MainEvt);
-		RecvPolSerialChar(&command);    /* �����Хåե��ݡ���� */
+		RecvPolSerialChar(&command);    /* 受信バッファポーリング */
 		if (command == '\n') {
 			command = '\0';
 		}
@@ -942,7 +942,7 @@ GetCommand(void)
 }   /* GetCommand */
 
 /*
- *  ActivateTask �¹ԡ��������Ͻ���
+ *  ActivateTask 実行・ログ出力処理
  */
 static void
 PutActTsk(uint8 task_no)
@@ -954,7 +954,7 @@ PutActTsk(uint8 task_no)
 }   /* PutActTsk	*/
 
 /*
- *  ActivateTask �¹�(NonPriTask)���������Ͻ���
+ *  ActivateTask 実行(NonPriTask)・ログ出力処理
  */
 static void
 PutActNonPriTsk(void)
@@ -965,12 +965,12 @@ PutActNonPriTsk(void)
 }   /* PutActNonPriTsk */
 
 /*
- *  TerminateTask �¹ԡ��������Ͻ���
+ *  TerminateTask 実行・ログ出力処理
  */
 static void
 PutTermTsk(uint8 task_no)
 {
-	StatusType ercd;        /* ���顼������ */
+	StatusType ercd;        /* エラーコード */
 
 	syslog(LOG_INFO, "%s TERMINATE", task_name_tbl[task_no]);
 
@@ -979,12 +979,12 @@ PutTermTsk(uint8 task_no)
 }
 
 /*
- *  ChainTask �¹ԡ��������Ͻ���
+ *  ChainTask 実行・ログ出力処理
  */
 static void
 PutChainTsk(uint8 from_task_no, uint8 to_task_no)
 {
-	StatusType ercd;            /* ���顼������ */
+	StatusType ercd;            /* エラーコード */
 
 	syslog(LOG_INFO, "Call ChainTask(%s)", task_name_tbl[to_task_no]);
 	syslog(LOG_INFO, "%s TERMINATE", task_name_tbl[from_task_no]);
@@ -999,7 +999,7 @@ PutChainTsk(uint8 from_task_no, uint8 to_task_no)
 }   /* PutChainTsk */
 
 /*
- *  Schedule �¹ԡ��������Ͻ���
+ *  Schedule 実行・ログ出力処理
  */
 static void
 PutSchedule(void)
@@ -1014,12 +1014,12 @@ PutSchedule(void)
 }   /* PutSchedule	*/
 
 /*
- *  GetTaskID �¹ԡ��������Ͻ���
+ *  GetTaskID 実行・ログ出力処理
  */
 static void
 PutTaskID(void)
 {
-	TaskType task_id;           /* ������ID�����Хåե� */
+	TaskType task_id;           /* タスクID取得バッファ */
 
 	error_log(GetTaskID(&task_id));
 
@@ -1027,12 +1027,12 @@ PutTaskID(void)
 }   /* PutTaskID	*/
 
 /*
- *  GetTaskState �¹ԡ��������Ͻ���
+ *  GetTaskState 実行・ログ出力処理
  */
 static void
 PutTaskState(uint8 task_no)
 {
-	TaskStateType state;        /* ������ID�����Хåե� */
+	TaskStateType state;        /* タスクID取得バッファ */
 
 	error_log(GetTaskState(task_id_tbl[task_no], &state));
 
@@ -1041,7 +1041,7 @@ PutTaskState(uint8 task_no)
 }   /* PutTaskState	*/
 
 /*
- *  DisableAllInterrupts/EnableAllInterrupts �¹ԡ��������Ͻ���
+ *  DisableAllInterrupts/EnableAllInterrupts 実行・ログ出力処理
  */
 static void
 PutDisAllInt(void)
@@ -1057,7 +1057,7 @@ PutDisAllInt(void)
 }   /* PutDisAllInt	*/
 
 /*
- *  SuspendAllInterrupts/ResumeAllInterrupts �¹ԡ��������Ͻ���
+ *  SuspendAllInterrupts/ResumeAllInterrupts 実行・ログ出力処理
  */
 static void
 PutSusAllInt(void)
@@ -1083,7 +1083,7 @@ PutSusAllInt(void)
 }   /* PutSusAllInt	*/
 
 /*
- *  SuspendOSInterrupts/ResumeOSInterrupts �¹ԡ��������Ͻ���
+ *  SuspendOSInterrupts/ResumeOSInterrupts 実行・ログ出力処理
  */
 static void
 PutSusOSInt(void)
@@ -1119,14 +1119,14 @@ PutSusOSInt(void)
 }   /* PutSusOSInt */
 
 /*
- *  �����ư��ƥ�����HW�������ͤΥ������Ͻ���
+ *  割込み動作テスト用HWカウンタ値のログ出力処理
  */
 static void
 PutHwCnt3(void)
 {
-	uint8	isr1_cnt = 0U;      /* C1ISR ��������ͼ����Хåե� */
-	uint8	isr2_cnt = 0U;      /* C2ISR ��������ͼ����Хåե� */
-	uint8	cnt;                /* ���ϲ�������� */
+	uint8	isr1_cnt = 0U;      /* C1ISR カウント値取得バッファ */
+	uint8	isr2_cnt = 0U;      /* C2ISR カウント値取得バッファ */
+	uint8	cnt;                /* 出力回数カウンタ */
 
 	for (cnt = 0U; cnt < 3U; cnt++) {
 		GetHwCnt(&isr1_cnt, &isr2_cnt);
@@ -1136,7 +1136,7 @@ PutHwCnt3(void)
 }   /* PutHwCnt3 */
 
 /*
- *  GetResource/ReleaseResource �¹�(�����󥿥꥽����)���������Ͻ���
+ *  GetResource/ReleaseResource 実行(カウンタリソース)・ログ出力処理
  */
 static void
 PutGetCntRes(void)
@@ -1151,7 +1151,7 @@ PutGetCntRes(void)
 }   /* PutGetCntRes	*/
 
 /*
- *  GetResource �¹�(��������٥�)���������Ͻ���
+ *  GetResource 実行(タスクレベル)・ログ出力処理
  */
 static void
 PutGetTskRes(void)
@@ -1162,7 +1162,7 @@ PutGetTskRes(void)
 }   /* PutGetTskRes */
 
 /*
- *  ReleaseResource �¹�(��������٥�)���������Ͻ���
+ *  ReleaseResource 実行(タスクレベル)・ログ出力処理
  */
 static void
 PutRelTskRes(void)
@@ -1173,7 +1173,7 @@ PutRelTskRes(void)
 }
 
 /*
- *  SetEvent �¹ԡ��������Ͻ���
+ *  SetEvent 実行・ログ出力処理
  */
 static void
 PutSetEvt(uint8 task_no)
@@ -1185,7 +1185,7 @@ PutSetEvt(uint8 task_no)
 }   /* PutSetEvt */
 
 /*
- *  ClearEvent �¹ԡ��������Ͻ���
+ *  ClearEvent 実行・ログ出力処理
  */
 static void
 PutClrEvt(uint8 task_no)
@@ -1196,12 +1196,12 @@ PutClrEvt(uint8 task_no)
 }   /* PutClrEvt */
 
 /*
- *  GetEvent �¹ԡ��������Ͻ���
+ *  GetEvent 実行・ログ出力処理
  */
 static void
 PutGetEvt(uint8 task_no)
 {
-	EventMaskType mask;             /* ���٥�ȥޥ��������Хåե� */
+	EventMaskType mask;             /* イベントマスク取得バッファ */
 
 	error_log(GetEvent(task_id_tbl[task_no], &mask));
 
@@ -1209,7 +1209,7 @@ PutGetEvt(uint8 task_no)
 }   /* PutGetEvt */
 
 /*
- *  WaitEvent �¹ԡ��������Ͻ���
+ *  WaitEvent 実行・ログ出力処理
  */
 static void
 PutWaitEvt(uint8 task_no)
@@ -1221,12 +1221,12 @@ PutWaitEvt(uint8 task_no)
 }   /* PutWaitEvt */
 
 /*
- *  GetAlarmBase �¹ԡ��������Ͻ���
+ *  GetAlarmBase 実行・ログ出力処理
  */
 static void
 PutArmBase(void)
 {
-	AlarmBaseType info;             /* ���顼��١�����������Хåե� */
+	AlarmBaseType info;             /* アラームベース情報取得バッファ */
 
 	error_log(GetAlarmBase(MainCycArm, &info));
 
@@ -1237,12 +1237,12 @@ PutArmBase(void)
 }   /* PutArmBase */
 
 /*
- *  PutArmTick �¹ԡ��������Ͻ���
+ *  PutArmTick 実行・ログ出力処理
  */
 static void
 PutArmTick(void)
 {
-	TickType tick;              /* �Ĥ�ƥ��å������Хåե� */
+	TickType tick;              /* 残りティック取得バッファ */
 
 	error_log(GetAlarm(MainCycArm, &tick));
 
@@ -1250,7 +1250,7 @@ PutArmTick(void)
 }   /* PutArmTick */
 
 /*
- *  SetRelAlarm �¹ԡ��������Ͻ���
+ *  SetRelAlarm 実行・ログ出力処理
  */
 static void
 PutSetRel(uint8 alarm_no, uint8 tick_no, uint8 cycle_no)
@@ -1263,7 +1263,7 @@ PutSetRel(uint8 alarm_no, uint8 tick_no, uint8 cycle_no)
 }   /* PutSetRel	*/
 
 /*
- *  SetAbsAlarm �¹ԡ��������Ͻ���
+ *  SetAbsAlarm 実行・ログ出力処理
  */
 static void
 PutSetAbs(uint8 alarm_no, uint8 tick_no, uint8 cycle_no)
@@ -1276,7 +1276,7 @@ PutSetAbs(uint8 alarm_no, uint8 tick_no, uint8 cycle_no)
 }   /* PutSetAbs */
 
 /*
- *  CancelAlarm �¹ԡ��������Ͻ���
+ *  CancelAlarm 実行・ログ出力処理
  */
 static void
 PutCanArm(void)
@@ -1287,7 +1287,7 @@ PutCanArm(void)
 }   /* PutCanArm */
 
 /*
- *  GetActiveApplicationMode �¹ԡ��������Ͻ���
+ *  GetActiveApplicationMode 実行・ログ出力処理
  */
 static void
 PutAppMode(void)
@@ -1310,14 +1310,14 @@ PutAppMode(void)
 
 
 /*
- *  ���顼�եå��롼����
+ *  エラーフックルーチン
  */
 #ifdef CFG_USE_ERRORHOOK
 void
 ErrorHook(StatusType Error)
 {
 	/*
-	 *  ���顼�װ����ȤΥѥ�᡼����������
+	 *  エラー要因ごとのパラメータログ出力
 	 */
 	switch (OSErrorGetServiceId()) {
 	case OSServiceId_ActivateTask:
@@ -1441,9 +1441,9 @@ ErrorHook(StatusType Error)
 #endif /* CFG_USE_ERRORHOOK */
 
 /*
- *  �ץ쥿�����եå��롼����
+ *  プレタスクフックルーチン
  *
- *  ���롼�����ƽФ�
+ *  空ルーチンを呼出す
  */
 #ifdef CFG_USE_PRETASKHOOK
 void
@@ -1453,9 +1453,9 @@ PreTaskHook(void)
 #endif /* CFG_USE_PRETASKHOOK */
 
 /*
- *  �ݥ��ȥ������եå��롼����
+ *  ポストタスクフックルーチン
  *
- *  ���롼�����ƽФ�
+ *  空ルーチンを呼出す
  */
 #ifdef CFG_USE_POSTTASKHOOK
 void
@@ -1465,7 +1465,7 @@ PostTaskHook(void)
 #endif /* CFG_USE_POSTTASKHOOK */
 
 /*
- *  �������ȥ��åץեå��롼����
+ *  スタートアップフックルーチン
  */
 #ifdef CFG_USE_STARTUPHOOK
 #ifdef TOPPERS_ENABLE_SYS_TIMER
@@ -1486,7 +1486,7 @@ StartupHook(void)
 #endif /* CFG_USE_STARTUPHOOK */
 
 /*
- *  ����åȥ�����եå��롼����
+ *  シャットダウンフックルーチン
  */
 #ifdef CFG_USE_SHUTDOWNHOOK
 #ifdef TOPPERS_ENABLE_SYS_TIMER
@@ -1496,7 +1496,7 @@ extern void target_timer_terminate(void);
 void
 ShutdownHook(StatusType Error)
 {
-	/* ��λ�������� */
+	/* 終了ログ出力 */
 	syslog(LOG_INFO, "");
 	syslog(LOG_INFO, "Sample System ShutDown");
 	syslog(LOG_INFO, "ShutDownCode:%s", atk2_strerror(Error));
@@ -1516,7 +1516,7 @@ ShutdownHook(StatusType Error)
 #endif /* CFG_USE_SHUTDOWNHOOK */
 
 /*
- *  �ץ��ƥ������եå��롼����
+ *  プロテクションフックルーチン
  */
 #ifdef CFG_USE_PROTECTIONHOOK
 ProtectionReturnType
@@ -1544,76 +1544,76 @@ ProtectionHook(StatusType FatalError)
 #endif /* CFG_USE_PROTECTIONHOOK */
 
 /*
- *  �����ƥॿ���ޤˤ�륢�顼�ॳ����Хå�
+ *  システムタイマによるアラームコールバック
  */
 ALARMCALLBACK(SysTimerAlmCb)
 {
 	/*
-	 *  ������Хå��¹ԥ�������
+	 *  コールバック実行ログ出力
 	 */
 	syslog(LOG_INFO, "CallBackArm Expire");
 
 }   /* ALARMCALLBACK(SysTimerAlmCb) */
 
 /*
- *  IncrementCounter��ǧ�ѥ��顼�ॳ����Хå�
+ *  IncrementCounter確認用アラームコールバック
  */
 ALARMCALLBACK(SampleAlmCb)
 {
 	/*
-	 *  ������Хå��¹ԥ�������
+	 *  コールバック実行ログ出力
 	 */
 	syslog(LOG_INFO, "SampleArm Expire");
 
 }   /* ALARMCALLBACK( SampleAlmCb ) */
 
 /*
- *  IncrementCounter��ǧ�ѥ��顼�ॳ����Хå�
+ *  IncrementCounter確認用アラームコールバック
  */
 ALARMCALLBACK(SampleAlmCb2)
 {
 	/*
-	 *  ������Хå��¹ԥ�������
+	 *  コールバック実行ログ出力
 	 */
 	syslog(LOG_INFO, "SampleArm2 Expire");
 
 }   /* ALARMCALLBACK( SampleAlmCb2 ) */
 
 /*
- *  �������塼��ơ��֥�ƥ����ѥᥤ��롼��
+ *  スケジュールテーブルテスト用メインループ
  *
- *  �桼�����ޥ�ɤμ����ȡ����ޥ�ɤ��Ȥν����¹�
+ *  ユーザコマンドの受信と，コマンドごとの処理実行
  */
 static void
 schedule_table_sample_routine(void)
 {
-	uint8					command;                /* ���ޥ�ɥХåե� */
-	ScheduleTableType		scheduletable_id;       /* ���ޥ�ɰ����Хåե� */
-	ScheduleTableStatusType	status;                 /* �������塼����ְ��� */
-	TickType				val;                    /* �����󥿤θ����� */
-	uint8					flag = FALSE;           /* �꥿���󤹤뤫Ƚ�ꤹ�뤿��Υե饰 */
+	uint8					command;                /* コマンドバッファ */
+	ScheduleTableType		scheduletable_id;       /* コマンド引数バッファ */
+	ScheduleTableStatusType	status;                 /* スケジュール状態引数 */
+	TickType				val;                    /* カウンタの現在値 */
+	uint8					flag = FALSE;           /* リターンするか判定するためのフラグ */
 
 	syslog(LOG_INFO, "\t[ schedule table sample routine IN, press 't' OUT ]");
 	syslog(LOG_INFO, "");
 
 	scheduletable_id = scheduletable1;
 	/*
-	 *  ���ޥ�ɼ¹ԥ롼��
+	 *  コマンド実行ループ
 	 */
 	while (1) {
 
-		WaitEvent(MainEvt);     /* 10ms�κ�Ȼ����Ԥ� */
+		WaitEvent(MainEvt);     /* 10msの作業時間待ち */
 		ClearEvent(MainEvt);
 
 		/*
-		 *  ���ϥ��ޥ�ɼ���
+		 *  入力コマンド取得
 		 */
 		syslog(LOG_INFO, "Input Command:");
 		command = GetCommand();
 		syslog(LOG_INFO, "%c", command);
 
 		/*
-		 *  ���ޥ��Ƚ��
+		 *  コマンド判定
 		 */
 		switch (command) {
 		case '1':
@@ -1667,10 +1667,10 @@ schedule_table_sample_routine(void)
 			ShutdownOS(E_OS_STATE);
 			break;
 		default:
-			/* ���ޥ�ɤ��嵭�Υ������ʳ��ʤ�����ϹԤ�ʤ� */
+			/* コマンドが上記のケース以外なら処理は行わない */
 			break;
 		}
-		/*  �ե饰��Ω�äƤ�����硤�꥿���󤹤�  */
+		/*  フラグが立っていた場合，リターンする  */
 		if (flag == TRUE) {
 			return;
 		}
@@ -1678,12 +1678,12 @@ schedule_table_sample_routine(void)
 }   /* schedule_table_sample_routine */
 
 /*
- *  �������塼��ơ��֥��ǧ�ѥ�����6
+ *  スケジュールテーブル確認用タスク6
  */
 TASK(Task6)
 {
 	/*
-	 *  ��������ư��������
+	 *  タスク起動ログ出力
 	 */
 	syslog(LOG_INFO, "Task6 ACTIVATE");
 	WaitEvent(T6Evt);
@@ -1693,12 +1693,12 @@ TASK(Task6)
 
 
 /*
- *  �������塼��ơ��֥��ǧ�ѥ�����7
+ *  スケジュールテーブル確認用タスク7
  */
 TASK(Task7)
 {
 	/*
-	 *  ��������ư��������
+	 *  タスク起動ログ出力
 	 */
 	syslog(LOG_INFO, "Task7 ACTIVATE");
 	WaitEvent(T7Evt);
@@ -1708,12 +1708,12 @@ TASK(Task7)
 
 
 /*
- *  �������塼��ơ��֥��ǧ�ѥ�����8
+ *  スケジュールテーブル確認用タスク8
  */
 TASK(Task8)
 {
 	/*
-	 *  ��������ư��������
+	 *  タスク起動ログ出力
 	 */
 	syslog(LOG_INFO, "Task8 ACTIVATE");
 	WaitEvent(T8Evt);
