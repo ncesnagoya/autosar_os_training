@@ -17,12 +17,12 @@ else
 fi
 
 # Make the reset observable even when PPR0 already contains 0xff.
-# athrill2 restores this temporary active-low bit before the polling completes.
+# athrill3 restores this temporary active-low bit before the polling completes.
 sh "$dsw_tool" "$dio_bin" 1 on || exit 1
 
 run_commands()
 {
-	# athrill2 resets PPR0 at startup, so DIP switches must be changed after reset.
+	# athrill3 resets PPR0 at startup, so DIP switches must be changed after reset.
 	count=0
 	while [ "$count" -lt 50 ]; do
 		value=$(od -An -tu1 -j 480 -N 1 "$dio_bin" 2>/dev/null | tr -d ' ')
@@ -32,13 +32,13 @@ run_commands()
 	done
 
 	if [ "$count" -eq 50 ]; then
-		echo "Error: timed out waiting for athrill2 to reset PPR0." >&2
+		echo "Error: timed out waiting for athrill3 to reset PPR0." >&2
 		if ! sh "$dsw_tool" "$dio_bin" 1 "$original_dsw1"; then
 			echo "Warning: failed to restore the original DSW1 state." >&2
 		fi
 		return 1
 	fi
-	# Do not restore DSW1 after reset detection: athrill2 has reset PPR0, so
+	# Do not restore DSW1 after reset detection: athrill3 has reset PPR0, so
 	# writing the pre-reset state here would incorrectly overwrite that reset.
 
 	for switch in $dsw_list; do
@@ -64,7 +64,7 @@ trap 'rm -f "$status_file"' 0 1 2 3 15
 {
 	run_commands
 	echo "$?" > "$status_file"
-} | athrill2 -c1 -i -d device_config.txt -m memory.txt atk2-sc1
+} | athrill3 -c1 -i -d device_config.txt -m memory.txt atk2-sc1
 athrill_status=$?
 run_status=$(cat "$status_file") || exit 1
 
