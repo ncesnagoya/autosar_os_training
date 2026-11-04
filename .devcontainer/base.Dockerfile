@@ -12,9 +12,16 @@ RUN wget https://github.com/toppers/athrill-gcc-v850e2m/releases/download/v1.1/a
     tar xzf athrill-gcc-package/athrill-gcc.tar.gz && \
     mv usr/local/athrill-gcc /usr/local/
 
-RUN wget https://github.com/toppers/athrill-target-rh850f1x/releases/download/v0.A.2/athrill-target-rh850f1x-x86_64-linux-20220813.tar.gz && \
-    tar xzf athrill-target-rh850f1x-x86_64-linux-20220813.tar.gz && \
-    cp athrill-target-rh850f1x/build_linux/athrill2 athrill-target-rh850f1x/athrill/bin/linux/
+# athrill3: the RH850F1x simulator built from the cpp branch of
+# toppers/athrill-target-rh850f1x (CMake, Athrill core cpp).
+ARG ATHRILL_TARGET_TAG=RC2-v1.0.0
+ARG ATHRILL_TARGET_ASSET=athrill-target-rh850f1x-x86_64-linux-20261104.tar.gz
+ARG ATHRILL_TARGET_SHA256=14a9ac6e33aec22fac3a55c8efe1b80caab29e6246d308820f495e72600b00a8
+RUN wget https://github.com/toppers/athrill-target-rh850f1x/releases/download/${ATHRILL_TARGET_TAG}/${ATHRILL_TARGET_ASSET} && \
+    echo "${ATHRILL_TARGET_SHA256}  ${ATHRILL_TARGET_ASSET}" | sha256sum -c - && \
+    tar xzf ${ATHRILL_TARGET_ASSET} && \
+    rm ${ATHRILL_TARGET_ASSET} && \
+    athrill-target-rh850f1x/bin/athrill3 2>&1 | grep -q "TARGET:"
 
 RUN git clone --depth=1 https://github.com/toppers/atk2-sc1.git
 
@@ -44,6 +51,6 @@ RUN wget -O shin.tar.gz https://github.com/${SHIN_REPO}/archive/${SHIN_REF}.tar.
     rm -rf shin shin.tar.gz
 
 ENV PATH=/usr/local/athrill-gcc/bin/:${PATH}
-ENV PATH=/home/toppers/athrill-target-rh850f1x/athrill/bin/linux:${PATH}
+ENV PATH=/home/toppers/athrill-target-rh850f1x/bin:${PATH}
 
 USER vscode

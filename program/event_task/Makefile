@@ -404,7 +404,7 @@ $(OBJNAME).srec: $(OBJFILE)
 #
 .PHONY: exe
 exe:
-	athrill2 -c1 -i -d device_config.txt -m memory.txt atk2-sc1
+	athrill3 -c1 -i -d device_config.txt -m memory.txt atk2-sc1
 
 #
 #  コンパイル結果の消去

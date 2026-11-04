@@ -1,7 +1,7 @@
 #!/bin/bash
 # Build every training program and check that each one boots on athrill.
 #
-# Runs inside the devcontainer image (athrill-gcc, cfg, atk2-sc1 and athrill2
+# Runs inside the devcontainer image (athrill-gcc, cfg, atk2-sc1 and athrill3
 # installed). The serial output of channel 1 goes to stderr; a program passes
 # the smoke test when the ATK2 start-up banner appears there.
 set -u
@@ -23,9 +23,9 @@ for dir in program/*/; do
         failed=1
         continue
     fi
-    # athrill2 exits with status 1 when it stops at the -t clock limit;
+    # athrill3 exits with status 1 when it stops at the -t clock limit;
     # treat that as success when it says so on stdout.
-    ( cd "$dir" && timeout 120 athrill2 -c1 -t "$clocks" \
+    ( cd "$dir" && timeout 120 athrill3 -c1 -t "$clocks" \
         -d device_config.txt -m memory.txt atk2-sc1 \
         > athrill.stdout 2> athrill.serial )
     status=$?
