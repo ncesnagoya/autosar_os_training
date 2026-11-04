@@ -7,4 +7,4 @@ ABREX_DIR=$OS_DIR/utils/abrex
 
 APP_NAME=toppers_atk2
 
-ruby $ABREX_DIR/abrex.rb ./$APP_NAME.yaml
+python3 $ABREX_DIR/abrex.py ./$APP_NAME.yaml

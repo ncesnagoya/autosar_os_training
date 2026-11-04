@@ -143,7 +143,8 @@ endif
 #  ユーティリティプログラムの名称
 #
 PERL = /usr/bin/perl
-CFG = $(SRCDIR)/cfg/cfg/cfg
+PYTHON = python3
+CFG = $(PYTHON) $(SRCDIR)/cfg/cfg_py/cfg.py
 
 #
 #  オブジェクトファイル名の定義
