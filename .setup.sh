@@ -1,4 +1,8 @@
-#/bin/sh
-ln -s /home/toppers/atk2-sc1 atk2-sc1
-unzip .devcontainer/dio_tools.zip
-chmod 755 dio_tools/*
+#!/usr/bin/env bash
+set -eu
+
+if [ ! -f dio_tools/dio.bin ]; then
+    unzip -q -o .devcontainer/dio_tools.zip
+fi
+
+chmod 755 dio_tools/*.sh dio_tools/dip_switch dio_tools/push_button dio_tools/digital_state
