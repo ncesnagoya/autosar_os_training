@@ -2,6 +2,14 @@
 	"name": "AUTOSAR OS Training",
 	"image": "ghcr.io/ncesnagoya/autosar_os_training:debian13",
 	"postCreateCommand": "bash .setup.sh",
+	"postStartCommand": "bash .devcontainer/start-board.sh",
+	"forwardPorts": [8989],
+	"portsAttributes": {
+		"8989": {
+			"label": "Board",
+			"onAutoForward": "openBrowser"
+		}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
