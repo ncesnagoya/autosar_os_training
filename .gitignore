@@ -20,8 +20,9 @@ atk2-sc?
 atk2-sc?.dump
 log.txt
 arg_sakura.txt
-dio_tools/
+/dio_tools/
 
 build.log
 athrill.stdout
 athrill.serial
+__pycache__/
