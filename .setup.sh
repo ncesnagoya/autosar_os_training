@@ -14,3 +14,8 @@ if [ ! -f dio_tools/dio.bin ]; then
 fi
 
 chmod 755 dio_tools/*.sh dio_tools/dip_switch dio_tools/push_button dio_tools/digital_state
+
+# Keep the legacy script names while replacing the archived x86 binaries with
+# portable Python-backed wrappers on every container creation.
+cp tools/board/dio_tools/*.sh dio_tools/
+chmod 755 dio_tools/*.sh
