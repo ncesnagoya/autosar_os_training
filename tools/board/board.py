@@ -16,6 +16,8 @@ LED_OFFSET = 0
 DSW_OFFSETS = ((480, 0x80), (481, 0x01), (481, 0x02), (481, 0x04))
 PSW_OFFSET = 512
 LOCK = threading.RLock()
+IMAGE_DIR = Path(__file__).parent / "img"
+IMAGES = {path.name for path in IMAGE_DIR.glob("*.png")}  # fixed set, no path lookups
 
 
 def read_bytes():
@@ -147,7 +149,7 @@ class Handler(BaseHTTPRequestHandler):
         return
 
     def respond(self, code, body, content_type="application/json; charset=utf-8"):
-        encoded = body.encode("utf-8")
+        encoded = body if isinstance(body, bytes) else body.encode("utf-8")
         self.send_response(code)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(encoded)))
@@ -168,6 +170,13 @@ class Handler(BaseHTTPRequestHandler):
             try:
                 page = (Path(__file__).parent / "index.html").read_text(encoding="utf-8")
                 self.respond(200, page, "text/html; charset=utf-8")
+            except OSError as error:
+                self.respond(500, str(error), "text/plain; charset=utf-8")
+            return
+        name = self.path.removeprefix("/img/")
+        if name != self.path and name in IMAGES:
+            try:
+                self.respond(200, (IMAGE_DIR / name).read_bytes(), "image/png")
             except OSError as error:
                 self.respond(500, str(error), "text/plain; charset=utf-8")
             return
