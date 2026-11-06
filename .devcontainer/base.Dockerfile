@@ -23,15 +23,10 @@ RUN wget https://github.com/toppers/athrill-target-rh850f1x/releases/download/${
     rm ${ATHRILL_TARGET_ASSET} && \
     athrill-target-rh850f1x/bin/athrill3 2>&1 | grep -q "TARGET:"
 
-RUN git clone --depth=1 https://github.com/toppers/atk2-sc1.git
-
 # cfg_py parses ARXML with Python's expat, which rejects multi-byte
-# encodings such as EUC-JP. Convert the kernel's EUC-JP ARXML files
-# (target_serial.arxml, ostm.arxml) to UTF-8, as atk2_sc1_shin ships them.
-RUN grep -rl --include='*.arxml' 'encoding="EUC-JP"' atk2-sc1 | while read -r f; do \
-        iconv -f EUC-JP -t UTF-8 "$f" | sed '1s/encoding="EUC-JP"/encoding="UTF-8"/' > "$f.utf8" && \
-        mv "$f.utf8" "$f"; \
-    done && \
+# encodings such as EUC-JP in the XML declaration; fail early if any is left.
+ARG ATK2_REF=main
+RUN git clone --depth=1 --branch ${ATK2_REF} https://github.com/toppers/atk2-sc1.git && \
     ! grep -rl --include='*.arxml' 'encoding="EUC-JP"' atk2-sc1
 
 # The configurator (cfg_py) and the YAML-to-ARXML generator (abrex.py) come
