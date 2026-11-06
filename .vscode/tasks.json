@@ -1,0 +1,76 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"detail": "make in the selected program directory",
+			"type": "shell",
+			"command": "make",
+			"options": { "cwd": "${workspaceFolder}/program/${input:program}" },
+			"group": { "kind": "build", "isDefault": true },
+			"problemMatcher": {
+				"base": "$gcc",
+				"fileLocation": ["autoDetect", "${workspaceFolder}/program/${input:program}"]
+			},
+			"runOptions": { "reevaluateOnRerun": false }
+		},
+		{
+			"label": "Build for debugging (-O0)",
+			"detail": "clean, then make without -O2, so that code follows the source and print finds variables",
+			"type": "shell",
+			"command": "make clean && make OMIT_OPTIMIZATION=1",
+			"options": { "cwd": "${workspaceFolder}/program/${input:program}" },
+			"group": "build",
+			"problemMatcher": {
+				"base": "$gcc",
+				"fileLocation": ["autoDetect", "${workspaceFolder}/program/${input:program}"]
+			},
+			"runOptions": { "reevaluateOnRerun": false }
+		},
+		{
+			"label": "Run on athrill",
+			"detail": "athrill3 -i (as make exe), with each debugger stop shown as a clickable file:line",
+			"type": "shell",
+			"command": "${workspaceFolder}/tools/vscode/run.sh ${input:program}",
+			"presentation": { "panel": "dedicated", "focus": true, "clear": true },
+			"problemMatcher": [],
+			"runOptions": { "reevaluateOnRerun": false }
+		},
+		{
+			"label": "Clean",
+			"detail": "make clean in the selected program directory",
+			"type": "shell",
+			"command": "make clean",
+			"options": { "cwd": "${workspaceFolder}/program/${input:program}" },
+			"problemMatcher": [],
+			"runOptions": { "reevaluateOnRerun": false }
+		}
+	],
+	"inputs": [
+		{
+			"id": "program",
+			"type": "pickString",
+			"description": "Training program",
+			"default": "led_1task",
+			"options": [
+				"alarm_hwcounter",
+				"alarm_swcounter",
+				"appmode",
+				"console_in",
+				"device_log_1task",
+				"event_int",
+				"event_task",
+				"int_disint",
+				"int_isr2",
+				"internal_resources",
+				"led_1task",
+				"multi_task_active",
+				"multi_task_actqueu",
+				"multi_task_chain",
+				"multi_task_nonpre",
+				"resources_task_int",
+				"sample"
+			]
+		}
+	]
+}
