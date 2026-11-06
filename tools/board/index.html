@@ -41,6 +41,7 @@
     .label { font-weight: 650; }
     .marks { grid-column:2 / -1; grid-row:3; display:flex; justify-content:flex-end; align-items:center; gap:14px; }
     .marks img { display:block; height:48px; width:auto; filter:drop-shadow(0 2px 3px #071d1599); }
+    .marks img.plate { box-sizing:border-box; padding:8px 10px; border-radius:6px; background:#fbfaf3; }
     @media (max-width: 720px) { body { padding: 14px; } .board { grid-template-columns: 92px 1fr 1fr; grid-template-rows:auto auto auto; gap:10px; padding:18px 14px 30px 28px; } .connectors { top:82px; bottom:34px; left:5px; } .cpu { grid-column:2; grid-row:2; width:100px; } .psw { grid-column:2; grid-row:3; } .leds { grid-column:3; grid-row:2; } .dsw { grid-column:3; grid-row:3; } section { min-height: auto; padding:12px 9px; } .push { width:64px; height:64px; } .stack { gap:8px; } .board::after { left:28px; } .marks { grid-column:1 / -1; grid-row:4; } .marks img { height:38px; } }
     @media (max-width: 420px) { .board { grid-template-columns: 82px 1fr 1fr; padding-left:20px; } section { padding:10px 6px; } h2 { font-size:.65rem; letter-spacing:.06em; } .toggle { width:42px; height:56px; } .toggle::after { left:5px; } .toggle[aria-checked="true"]::after { transform:translateY(14px); } }
   </style>
@@ -70,6 +71,7 @@
       <div class="switchrow"><span class="label">DSW4</span><button class="toggle" role="switch" aria-checked="false" data-dsw="4" aria-label="DSW4"></button></div>
     </div></section>
     <div class="marks">
+      <img class="plate" src="/img/nces.png" alt="NCES">
       <img src="/img/athrill.png" alt="athrill">
       <img src="/img/hakoniwa.png" alt="箱庭">
     </div>
