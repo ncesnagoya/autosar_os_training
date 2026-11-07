@@ -15,6 +15,30 @@ chosen last time instead of asking again.
 Run the Clean task before going back from the debugging build to the normal
 one: `make` alone does not rebuild objects when only the options change.
 
+## Debugging in the editor (F5)
+
+`.vscode/launch.json` has the configuration **Debug on athrill (gdb)**. It
+starts athrill3 as a GDB server (`athrill3 -g 1234`, through
+`tools/vscode/gdb-server.sh`) and connects `gdb-multiarch` to it, so the
+usual VS Code debugger works on the source: breakpoints in the editor
+margin, Step Over / Into / Out, variables, watch and the call stack.
+
+1. Build the program with **Build for debugging (-O0)**.
+2. Open **Run and Debug**, choose **Debug on athrill (gdb)** and press F5.
+3. Choose the same program as in step 1.
+
+The program stops at the reset vector (`_tp` in `prc_support.S`). Set
+breakpoints, then press Continue (F5). Pause stops a running program, and
+Stop ends athrill3.
+
+Notes:
+
+- Only one debug session runs at a time: it uses port 1234.
+- Reading a peripheral register in the Watch or Memory view reads the device,
+  which may change its state.
+- athrill3 needs the Athrill core v3.1.0 or later (`-g`), and the image needs
+  `gdb-multiarch`.
+
 ## Debugging in the terminal
 
 Run on athrill stops at the reset vector with a `[DBG>` prompt. Type the

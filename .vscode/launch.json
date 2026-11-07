@@ -1,0 +1,52 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Debug on athrill (gdb)",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/program/${input:program}/atk2-sc1",
+			"cwd": "${workspaceFolder}/program/${input:program}",
+			"MIMode": "gdb",
+			"miDebuggerPath": "/usr/bin/gdb-multiarch",
+			"miDebuggerServerAddress": "localhost:1234",
+			"debugServerPath": "${workspaceFolder}/tools/vscode/gdb-server.sh",
+			"debugServerArgs": "${input:program} 1234",
+			"serverStarted": "gdb server listening on port",
+			"serverLaunchTimeout": 20000,
+			"setupCommands": [
+				{
+					"description": "athrill3 runs bare-metal V850 code",
+					"text": "set osabi none"
+				}
+			]
+		}
+	],
+	"inputs": [
+		{
+			"id": "program",
+			"type": "pickString",
+			"description": "Training program",
+			"default": "led_1task",
+			"options": [
+				"alarm_hwcounter",
+				"alarm_swcounter",
+				"appmode",
+				"console_in",
+				"device_log_1task",
+				"event_int",
+				"event_task",
+				"int_disint",
+				"int_isr2",
+				"internal_resources",
+				"led_1task",
+				"multi_task_active",
+				"multi_task_actqueu",
+				"multi_task_chain",
+				"multi_task_nonpre",
+				"resources_task_int",
+				"sample"
+			]
+		}
+	]
+}
