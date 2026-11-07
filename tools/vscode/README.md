@@ -31,6 +31,11 @@ The program stops at the reset vector (`_tp` in `prc_support.S`). Set
 breakpoints, then press Continue (F5). Pause stops a running program, and
 Stop ends athrill3.
 
+The program's serial output (`syslog`) appears in the **Debug Console**, with
+a `gdb-server:` prefix and mixed with athrill3's start-up messages and GDB's
+output. athrill3 writes it to stderr; `gdb-server.sh` sends it to stdout,
+which cpptools shows there.
+
 Notes:
 
 - Only one debug session runs at a time: it uses port 1234.

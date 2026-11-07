@@ -14,4 +14,7 @@ fi
 
 # memory.txt names dio.bin relative to the program directory.
 cd "$dir"
-exec athrill3 -c1 -g "$port" -d device_config.txt -m memory.txt atk2-sc1
+# athrill3 writes the serial output (syslog) to stderr. cpptools shows only
+# the server's stdout in the Debug Console (filterStderr makes the launch
+# fail), so send both to stdout.
+exec athrill3 -c1 -g "$port" -d device_config.txt -m memory.txt atk2-sc1 2>&1
