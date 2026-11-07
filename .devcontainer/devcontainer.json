@@ -13,7 +13,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-vscode.cpptools"
+				"ms-vscode.cpptools",
+				"redhat.vscode-xml"
 			]
 		}
 	},
