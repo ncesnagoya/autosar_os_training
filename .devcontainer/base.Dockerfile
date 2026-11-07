@@ -3,7 +3,7 @@ FROM mcr.microsoft.com/devcontainers/base:2-trixie
 USER root
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-        git make python3 python3-yaml unzip wget \
+        gdb-multiarch git make python3 python3-yaml unzip wget \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/toppers
@@ -13,10 +13,10 @@ RUN wget https://github.com/toppers/athrill-gcc-v850e2m/releases/download/v1.1/a
     mv usr/local/athrill-gcc /usr/local/
 
 # athrill3: the RH850F1x simulator from the toppers/athrill-target-rh850f1x
-# release (CMake build on the Athrill core v3.0.0).
-ARG ATHRILL_TARGET_TAG=v1.0.0
-ARG ATHRILL_TARGET_ASSET=athrill-target-rh850f1x-x86_64-linux-20261104.tar.gz
-ARG ATHRILL_TARGET_SHA256=67369be7a729618dc00228f2b0fdbf215f6ab36ceeb734d1875c049f7fb1ea95
+# release (CMake build on the Athrill core v3.1.0, with the GDB RSP server, -g).
+ARG ATHRILL_TARGET_TAG=v1.1.0
+ARG ATHRILL_TARGET_ASSET=athrill-target-rh850f1x-x86_64-linux-20261107.tar.gz
+ARG ATHRILL_TARGET_SHA256=4d8bc9659eb5fe84a2063260192c4d39bb611dbe98379cd00927307659399602
 RUN wget https://github.com/toppers/athrill-target-rh850f1x/releases/download/${ATHRILL_TARGET_TAG}/${ATHRILL_TARGET_ASSET} && \
     echo "${ATHRILL_TARGET_SHA256}  ${ATHRILL_TARGET_ASSET}" | sha256sum -c - && \
     tar xzf ${ATHRILL_TARGET_ASSET} && \
